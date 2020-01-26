@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form_login {
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("../img/formBg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+form {
+    padding: 10px;
+    box-shadow: 0 1px 20px -4px;
+    border-radius: 20px;
+    margin: 10px;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+  
+.formh1 {
+    margin: 10px;
+    color: darkcyan;
+    text-align: center;
+    font-size: 40px;
+}
+  
+.formIcon {
+    background-image: url("../img/farmer.png");
+    background-size: 110%;
+    background-position: 1px;
+    margin: 10%;
+    border-radius: 50%;
+    border: 1px solid;
+    height: 50px;
+    width: 50px;
+    margin: auto;
+}
+
+
+textarea {
+    resize: vertical;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px dashed darkcyan;
+}
+  
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px dotted darkcyan;
+    width: 100%;
+  }
+  
+  
+.formButton {
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: darkcyan;
+    color: white;
+    width: 100px;
+    margin: auto;
+    margin-top: 15px;
+    margin-right: 10px;
+    float: right;
+}
+
+
+.signUpBlock {
+    margin-top: 60px;
+    padding: 17px;
+}
+  
