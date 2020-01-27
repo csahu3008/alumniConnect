@@ -9,7 +9,7 @@
     $published_date = date('Y-m-d H:i:s');
     echo"$_SESSION[college_id],$title,$description,$published_date";
     $con=mysqli_connect('localhost','root','','alumniconnect');
-    $q="insert into notice values (null,'$title','$description','$published_date','$_SESSION[college_id]')";
+    $q="insert into notice values (null,'$title','$description','$published_date','$_SESSION[college_id]',0)";
     $res=mysqli_query($con,$q);
     if($res)
     {
