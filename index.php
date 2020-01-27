@@ -7,18 +7,21 @@
     <title>Demo-Home Page</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel = "stylesheet" href = "assets/css/fontawesome/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Righteous|Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
+        <div class="nav">
             <p class="web-name">Demo</p>
+        </div>
+        <div class="nav2">
             <a href="index.php">Home</a>
             <a href="login.php">Login</a>
-        </nav>
-        
+        </div>
+        <p class="detail">Get Connected__ALUMINI</p>
+        <img src="assets/images/" alt="">
 
-        <i class="fas fa-chevron-down fa-5x"></i>
+        <a href=""><i class="fas fa-chevron-down fa-4x"></i></a>
     </header>
 
     <section class = "section">
@@ -26,7 +29,7 @@
     </section>
 
     <footer class="footer">
-    
+
     </footer>
 </body>
 </html>
