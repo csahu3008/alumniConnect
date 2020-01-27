@@ -8,7 +8,7 @@
     height: 100vh;
     overflow: hidden;
     overflow-y: scroll;
-    background: black url('../img/formBg.jpg') fixed center;
+    background-image: linear-gradient(to right,#710193,#800080);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -41,12 +41,7 @@
     margin: 10px 0 10px auto;
     background: #b87f00;
     color: white;
-} #userIdSpan, #passwordSpan, #nameSpan, #emailSpan,
-  #collegeSpan, #branchSpan, #contactSpan, #semesterSpan,
-  #admissionSpan, #password1Span, #password2Span,
-  #anameSpan, #aemailSpan,
-  #acollegeSpan, #abranchSpan, #acontactSpan, #asemesterSpan,
-  #aadmissionSpan, #apassword1Span, #apassword2Span  {
+} label > span  {
     position: relative;
     top: 40px;
     left: 15px;
@@ -85,7 +80,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 120px;
 }.icon {
     background: transparent url('../img/admin-settings-male.png') center;
     background-size: cover;
@@ -112,6 +107,7 @@
     background: #ffffff99;
     cursor: pointer;
     font-size: 21px;
+    text-align: center;
 } #icon2 > span {
     margin-top: 95px;
     margin-left: 0;
@@ -126,7 +122,7 @@
 #signIn, #register, #alumniRegister {
     display: inline-block;
 } #register, #alumniRegister {
-    height: 271px;
+    height: 500px;
     overflow: hidden;
     overflow-y: scroll;
 }
@@ -182,4 +178,9 @@ form > h2 {
     } .forms form {
         width: 90%;
     }
+}
+
+.wrong{
+    margin-top: 0px;
+    border: 2px solid red;
 }
