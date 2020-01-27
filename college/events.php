@@ -12,7 +12,7 @@
     $published_date = date('Y-m-d H:i:s');
     echo"$_SESSION[college_id],$title,$description,$event_date,$event_time,$venue,$published_date";
     $con=mysqli_connect('localhost','root','','alumniconnect');
-    $q="insert into event values (null,'$title','$description','$published_date','$event_date','$event_time','$venue',1,'$_SESSION[college_id]',null)";
+    $q="insert into event values (null,'$title','$description','$published_date','$event_date','$event_time','$venue',1,'$_SESSION[college_id]',0,0)";
     $res=mysqli_query($con,$q);
     if($res)
     {

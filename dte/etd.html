@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>etd</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            background: cadetblue;
+            padding: 20px;
+            border-radius: 0 0 40px 40px;
+            text-align: center;
+        }
+        .listHeading, .collegeContainer {
+            display: grid;
+            grid-template-columns: 24% 52% 24%;
+            padding: 10px;
+        }.listHeading > div, .collegeContainer > div {
+            margin: 10px;
+            padding: 5px;
+            background: #ffffffaa;
+            border-radius: 10px;
+        } .headContainer {
+            background: darkcyan;
+        } .collegeContainer {
+            border-bottom: 2px dashed blue;
+        } .listContainer {
+            box-shadow: 0 -3px 15px -4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="headContainer">
+        <h1 class="heading">List of Colleges</h1>
+        <div class="listHeading"><div>College Id</div><div>College Name</div><div>Address</div></div>
+    </div>
+    <div class="listContainer"></div>
+    <!-- <table class="main-table">
+
+        <tr>
+            <th>College_Id</th>
+            <th>College Name</th>
+            <th>Address</th>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="getCollege.php?id=">Government Engineering College</a></td>
+            <td>Raipur</td>
+        </tr>
+        <tr>
+                <td>5</td>
+                <td><a href="getCollege.php?id=">Indian Institute of Technology</a></td>
+                <td>Bhilai</td>
+        </tr>
+
+    </table> -->
+    <script>
+        let collegeList = [
+            {id: '3',name: 'Government Engineering College',address: "Raipur"},
+            {id: '4',name: 'Pragati Engineering College',address: "Bilaspur"},
+            {id: '5',name: 'Bhilai Institute of Technology',address: "Bhilai"}
+        ];
+        let htmlEle = ''
+        for(i of collegeList) {
+            console.log(i)
+            htmlEle += `<div class="collegeContainer"><div class="id">${i.id}</div><div class="name">${i.name}</div><div class="address">${i.address}</div></div>`
+        }
+        const listContainer = document.querySelector('.listContainer');
+        listContainer.innerHTML = htmlEle;
+    </script>
+
+</body>
+</html>

@@ -1,8 +1,15 @@
 *{
     margin:0px;
     padding:0px;
+    box-sizing: border-box;
+} html {
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
-
+body {
+    overflow-x: hidden;
+}
 .header{
     width:100%;
     height:35rem;
@@ -13,72 +20,43 @@
 }
 .section{
     width:100%;
-    height:130rem;
     /* background-image:linear-gradient(to right,yellow,white) */
     border-top-left-radius: 50% 20%;
     border-top-right-radius: 50% 20%;
 }
-.section1{
-    width: 40%;
-    height: 15%;margin-top:100px;
-    float: left;
-    margin-left: 100px;
+.section1, .section4{
+    height: 400px;
+    margin-top: -110px;
+    position: relative;
+    z-index: -1;
     background: lightgray;
     background-size: cover;
     background-image: url("https://images.unsplash.com/photo-1561489413-985b06da5bee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
 }
-.section2{
-    height: 15%;
-    Width:40%;
-    margin-top:100px;
-    /* background: lightcoral; */
-    margin-left: 100px;
- 
-    float: left;
+.section2, .section3{
+    padding: 20px;
 }
 .section2 p,.section3 p,.section9 p{
     line-height: 2rem;
 }
-.section2 h3,.section9 h3{
-    margin-left:150px;
+.section2 h3,.section9 h3, .section3 h3{
+    margin: auto;
     font-size: 40px;
     font-family: 'Varela Round', sans-serif;
-}
-.section3 h3{
-    margin-left:70px;
-    font-size: 40px;
-    font-family: 'Varela Round', sans-serif;
-}
-.section3{
-    height: 15%;
-    Width:40%;
-    margin-top:120px;
-    /* background: lightcoral; */
-    margin-left: 100px;
-    float: left;
+    text-align: center;
 }
 .section4{
-    height: 15%;
-    Width:40%;
-    margin-top:100px;
-    /* background: lightgray; */
-    margin-left: 100px;
-    float: left;
-    background-size: cover;
+    margin: 0;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px -4px;
     background-image: url("https://www.simc.edu/img/gallery/large/pic_7.jpg");
 }
-.section5{
-    height: 5%;
-    Width:100%;
-    /* background: lightblue; */
-    margin-top: 100px;
-    float: left;
-}
 .section5 h3{
-    font-size:50px;
-    margin-left:600px;
+    font-size:100px;
+    margin-top: 70px;
     font-family: 'Varela Round', sans-serif;
-    align:center;
+    text-align:center;
 }
 .section6{
     height: 25%;
@@ -91,42 +69,30 @@
 }
 .section7{
     height: 25%;
-    width:27%;
-    margin-top:40px;
-    box-shadow: 0px 1px 20px -4px;
-    /* background: lightgray; */
-    margin-left: 200px;
-    float: left;
-    padding:1.5%;
+    margin-top: 40px;
+    background: darkcyan;
+    padding: 30px;
     
 }
 
 .groupchat-section{
-    height: 26.2%;
+    height: 500px;
     Width:100%;
-    /* margin-top:0px; */
-    /* background: lightcoral;  */
-    float: left;
-    overflow: hidden;
 }
 .groupchat-section1{
-    float: left;
-    width: 50%;
-    height: 100%;
+    height: 200px;
 }
 .groupchat-image{
-    width:30%;
-    height:100%;
+    background-position: center;
+    width: 300px;
+    margin: 0% 25%;
     background-size: cover;
-    float: left;
-    margin-top: 150px;
-    margin-left: 100px;
     transform: rotate(-35deg);
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdyiCwcbf2CgU-5Gk6m4vCnCalqjafqQ7wxUTGdZ1FG40Y3IQE');
 }
 .groupchat-section1 h3{
-    margin-left:150px;
-    margin-top: 270px;
+    margin: auto;
+    text-align: center;
     font-size: 45px;
     font-family: 'Varela Round', sans-serif;
 }
@@ -134,7 +100,10 @@
     font-family: 'Varela Round', sans-serif;
     font-size: 30px;
     color:purple;
-    padding: 50px;
+    padding: 20px;
+} .groupchat-section1 > div{
+    margin-top: 50%;
+    transform: translate(0px, -50%);
 }
 .img2{
     width:100%;
@@ -142,10 +111,10 @@
     text-align: justify;
     /* background: lightgray; */
 }
-.img1{
+.img1, .img3{
     width: 270px;
     margin-top:20px;
-    box-shadow: 12px 12px 12px;
+    box-shadow: 0 0 15px -2px;
     height: 270px;
     margin: auto;
     border-radius:50%;
@@ -153,12 +122,6 @@
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5oRimAve9AeNQdkUARaY32XKUpBnCjncuCQJZhoPOcTs1qq33");
 }
 .img3{
-    width: 270px;
-    height: 270px;
-    box-shadow: 12px 12px 12px;
-    margin: auto;
-    border-radius:50%;
-    background-size: cover;
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQNbA24jLtpfC9j-U0N0fSMHGAW-phlz-GnrmOf2qrZ1ZztnhKy");
 }
 .img2 p{
@@ -173,34 +136,40 @@
 }
 
 .nav{
-    float: left;
-    width: 40%;
-}
-.nav2{
-    float:left;
-    width:20%;
-    height:40px;
-    margin-left:420px;
     font-family: 'Varela Round', sans-serif;
-
-    padding: 50px;
-    /* background: red; */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+} .nav p {
+    margin: auto;
+    padding: 10px
+} .nav div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
-.nav2 a{
+.nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size:25px;
     text-align: right;  
-    margin-left:38px;
     padding: 10px;
-  
+    border-radius: 10px;
+    margin: 10px;
+    background: #00000033;
+    box-shadow: 0 0 0 white;
 }
 .header img{
     width: 60rem;
     height:60vh;
     margin-top: -140px;
     
+}
+.section, .groupchat-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 26px;
 }
 .footer2 p{
     text-align:center;
@@ -214,8 +183,8 @@
     color: white;
     font-weight: 100;
     font-family: 'Varela Round', sans-serif;
-    margin-left:550px;
-    margin-top:250px;
+    margin-left:calc(100% - 750px);
+    margin-top: 200px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -237,14 +206,14 @@
     50% { border-color: white; }
   }
 .header i{
-    width:40rem;
-    height:50rem;
+    display: block;
+    margin: 20px auto;
+    width: min-content;
     color: white;
-    margin-left:38rem;
-    margin-top:10rem;
 }
-.nav2 a:hover{
-    border-bottom: 3px solid white;
+.nav a:hover{
+    /* border-bottom: 3px solid white; */
+    box-shadow: 0 3px 0 white;
     transition:  0.3s ease 0s, left 0.3s ease 0s;
 }
 
@@ -298,24 +267,32 @@ ul {
 @media only screen and (max-width:600px)
 {
     .detail {
-        font-size: 30px;
-        margin-left:70px;
-        margin-top:380px;
+        font-size: 22px;
+        margin-left: calc(100% - 350px);
+    } .nav {
+        grid-template-columns: 100%;
     }
-    .nav{
-        display: inline-block;
-    }
-    .nav2{
-        margin-left: auto;
-        display: inline-block;
-    }
-    .nav2 a{
+    /* .nav a{
         float: left;
+    } */
+   
+    .nav div {
+        justify-content: center;
     }
-    .header i{
-        margin-top:35px;
-        margin-left:230px;
-        width:10rem;
-        height: 10rem;
+    .section {
+        display: grid;
+        grid-template-columns: 100%;
+    } .groupchat-section {
+        grid-template-columns: 100%;
+        height: auto;
+    } .groupchat-image {
+        width: 100%;
+        transform: rotate(0deg);
+        height: 600px;
+        margin: 0;
+    } .groupchat-section1 {
+        height: 200px;
+    } .groupchat-section1 > div {
+        margin-top: 30%;
     }
 }
