@@ -8,6 +8,7 @@
     <title></title>
 </head>
 <body>
+    <div class="alumini-details">
 <?php
 session_start();
 $_SESSION['user']='student2';
@@ -33,6 +34,34 @@ while($row= mysqli_fetch_array($rs_student) )
 echo"</tbody>";
 echo"</table>";
 ?> 
-
+</div>
+<div class="notices">
+    <input type="button" id = "seenotices" value="See Notices">
+    <input type="button" id = "seeevents" value="See Events">
+    <p id="showDetail"></p>
+</div>    
 </body>
 </html>
+
+<script>
+        $(document).ready(function(){
+    
+        $("#seenotices").click(function(){
+          
+                $("#seenotices").css({"display":"hidden"});
+                $.post('../college/seeNotice.php' , {} , function(data){
+                    $("#showDetail").html(data);
+                });
+            
+        });
+        $("#seeevents").click(function(){
+          
+          $("#seeevents").css({"display":"hidden"});
+          $.post('../college/seeEvents.php' , {} , function(data){
+              $("#showDetail").html(data);
+          });
+      
+  });
+        
+    });
+</script>
