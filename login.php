@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php session_start();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,27 +17,27 @@
         <div class="icons">
             <!-- <div> -->
                 <div id="icon1" class="icon" onclick="register('#icon1', '#icon2', '#icon3', '#signIn')"><span>Login</span></div>
-                <div id="icon2" class="icon" onclick="register('#icon2', '#icon1', '#icon3', '#register')"><span>Register</span></div>
+                <div id="icon2" class="icon" onclick="register('#icon2', '#icon1', '#icon3', '#register')"><span>Register as Student</span></div>
                 <div id="icon3" class="icon" onclick="register('#icon3', '#icon1', '#icon2', '#alumniRegister')"><span>Alumni Register</span></div>
             <!-- </div> -->
         </div>
         <div class="forms">
             
             <div>
-                <form action="/" method="POST" id="signIn">
+                <form action="" method="POST" id="signIn">
                     <h2>Login as student</h2>
                     <div id="loginForm">
-                        <label for="userId"><span id="userIdSpan">userId</span>
+                        <label for="userId"><span id="userIdSpan">username or Email</span>
                             <input required type="text" name="user" id="userId" onfocus="moveUp('userId')" onblur="moveDown('userId')">
                         </label>
                         <label for="password"><span id="passwordSpan">password</span>
                             <input required type="password" name="pwd" id="password" onfocus="moveUp('password')" onblur="moveDown('password')">
                         </label>
-                        <button id="submit">Button</button>
+                        <button id="submit">Log In</button>
                     </div>
                 </form>
                 <!-- signup -->
-                <form action="/" method="POST" id="register">
+                <form action="./register/studentSignup.php" method="POST" id="register" onsubmit="return checkPassword()">
                     <h2>Signup as student</h2>
                     <div id="loginForm">
                         <label for="name"><span id="nameSpan">Name</span>
@@ -68,11 +68,11 @@
                             <input required type="password" name="password2" id="password2" onfocus="moveUp('password2')" onblur="moveDown('password2')">
                         </label>
                         
-                        <button id="submit">Button</button>
+                        <button id="submit">Register</button>
                     </div>
                 </form>
                 <!-- signup -->
-                <form action="/" method="POST" id="alumniRegister">
+                <form action="./register/alumniSignup.php" method="POST" id="alumniRegister" onsubmit="return checkPassword()">
                     <h2>Register as Alumni</h2>
                     <div id="loginForm">
                         <label for="aname"><span id="anameSpan">Name</span>
@@ -90,11 +90,17 @@
                         <label for="acontact"><span id="acontactSpan">Contact</span>
                             <input pattern="[0-9]{10}" required type="text" name="sContact" id="acontact" onfocus="moveUp('acontact')" onblur="moveDown('acontact')">
                         </label>
-                        <label for="asemester"><span id="asemesterSpan">Semester</span>
-                            <input required type="text" name="sSemester" id="asemester" onfocus="moveUp('asemester')" onblur="moveDown('asemester')">
+                        <label for="acompany"><span id="acompanySpan">Company</span>
+                            <input required type="text" name="sCompany" id="acompany" onfocus="moveUp('acompany')" onblur="moveDown('acompany')">
                         </label>
-                        <label for="aadmission"><span id="aadmissionSpan">Admission Year</span>
-                            <input required type="text" name="sAdmission" id="aadmission" onfocus="moveUp('aadmission')" onblur="moveDown('aadmission')">
+                        <label for="adesignation"><span id="adesignationSpan">Designation</span>
+                            <input required type="text" name="sDesignation" id="adesignation" onfocus="moveUp('adesignation')" onblur="moveDown('adesignation')">
+                        </label>
+                        <label for="alocation"><span id="alocationSpan">Location</span>
+                            <input required type="text" name="sLocation" id="alocation" onfocus="moveUp('alocation')" onblur="moveDown('alocation')">
+                        </label>
+                        <label for="apassed"><span id="apassedSpan">Passing Year</span>
+                            <input required type="text" name="sPassed" id="apassed" onfocus="moveUp('apassed')" onblur="moveDown('apassed')">
                         </label>
                         <label for="apassword1"><span id="apassword1Span">Password</span>
                             <input required type="password" name="password1" id="apassword1" onfocus="moveUp('apassword1')" onblur="moveDown('apassword1')">
@@ -103,7 +109,7 @@
                             <input required type="password" name="password2" id="apassword2" onfocus="moveUp('apassword2')" onblur="moveDown('apassword2')">
                         </label>
                         
-                        <button id="submit">Button</button>
+                        <button id="submit">Register</button>
                     </div>
                 </form>
             </div>
@@ -115,6 +121,18 @@
         // var userSpan = document.querySelector('#userIdSpan');
         // var passwordSpan = document.querySelector('#passwordpan');
         // var password = document.querySelector('#password');
+        function checkPassword(){
+        let password1=document.getElementById('password1').value
+        let password2=document.getElementById('password2').value
+         if(password1 !== password2)
+         {
+            return false
+         }
+         else{
+            return true
+         }
+
+    }
         function initialCall() {
         var user = document.querySelector('#userId');   
             console.log(user.value);
@@ -148,8 +166,6 @@
 
             icon2.style.transform = 'scale(0.5)';
             icon3.style.transform = 'scale(0.5)';
-
-
         }
     </script>
     <?php
@@ -157,33 +173,28 @@
             $user=$_REQUEST['user'];
             $pwd=md5($_REQUEST['pwd']);
 
-            $dsn = 'mysql:host=localhost;dbname=codeutsava';
+            $dsn = 'mysql:host=localhost;dbname=alumniconnect';
             $pdo = new PDO($dsn,'root','');
             $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
-            $sql = 'SELECT * FROM login_detail where user=?';
+            $sql = 'SELECT * FROM logindetail where username=?';
 
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$user]);
 
             $row=$stmt->fetch();
             if($row){
-                if($row->pass==$pwd){
+                if($row->password==$pwd){
                     echo "logged in";
-                    if($user[0]=='f'){
-                        session_start();
-                        $_SESSION['farmer']=$user;
-                        header("location:../farmer/show_prd_farm.php");
-                    }else if($user[0]=='w'){
-                        echo "Warehouse";
-                        session_start();
-                        $_SESSION['warehouse']=$user;
-                        header("location:../warehouse/show_contact.php");
-                     }else if($user[0]=='c'){
-                        session_start();
-                        $_SESSION['customer']=$user;
-                        header("location:../customer/products.php");
-                    }else{
+                    if($user[0]=='s'){
+                        // session_start();
+                        $_SESSION['user']=$user;
+                    }else if($user[0]=='a'){
+                        // session_start();
+                        $_SESSION['user']=$user;
+                     }else{
+                        // session_start();
+                        $_SESSION['user']=$user;    
                         echo "Something went wrong. ☹ "; 
                     }
                 }else{

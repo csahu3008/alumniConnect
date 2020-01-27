@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Previously Published Notices</h1>
+    <h1>Published Notices</h1>
     <?php
     session_start();
     $con=mysqli_connect('localhost','root','','alumniconnect');
-    $q="select * from notice where college_id='$_SESSION[college_id]'";
+    $q="select * from notice where college_id='$_SESSION[user]'";
     $res=mysqli_query($con,$q);
     echo"<div>";
     while($row=mysqli_fetch_array($res))

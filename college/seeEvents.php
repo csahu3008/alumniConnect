@@ -10,7 +10,7 @@
     <?php
     session_start();
     $con=mysqli_connect('localhost','root','','alumniconnect');
-    $q="select * from event where college_id='$_SESSION[college_id]'";
+    $q="select * from event where college_id='$_SESSION[user]'";
     $res=mysqli_query($con,$q);
     echo"<div>";
     while($row=mysqli_fetch_array($res))
