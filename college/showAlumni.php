@@ -56,7 +56,7 @@ while($row= mysqli_fetch_array($rs_college) )
     while($row_alumni = mysqli_fetch_array($res_alumni))
         {
             $temp++;
-            echo"<tr><th>$row_alumni[id]</th><th>$row_alumni[name]</th><th>$row_alumni[college]</th><th>$row_alumni[branch]</th><th>$row_alumni[email]</th><th>$row_alumni[contact]</th><th>$row_alumni[passing_year]</th><th>$row_alumni[designation]</th></tr>";
+            echo"<tr><th>$row_alumni[id]</th><th>$row_alumni[name]</th><th>$row_alumni[college]</th><th>$row_alumni[branch]</th><th><a href='emailsending.php?email=$row_alumni[email]&&name=$row_alumni[name]'>$row_alumni[email]</a></th><th>$row_alumni[contact]</th><th>$row_alumni[passing_year]</th><th>$row_alumni[designation]</th></tr>";
         }
 }
 echo"</tbody>";
