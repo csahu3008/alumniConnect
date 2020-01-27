@@ -1,0 +1,60 @@
+<!-- <?php -->
+    <!-- $id = $_GET['id']; -->
+<!-- ?> -->
+<!-- <?php
+
+    if(isset($_REQUEST['key']))
+    {
+        $branch = $_REQUEST['key'];
+
+
+        $con = mysqli_connect('localhost' ,'root' ,'' , '');
+        $q = "SELECT*from  where branch = '$b'";
+        $rs = mysqli_query($con , $q);
+
+        echo "<table class = 'main-table' cellspacing = 20>";
+        echo "<tr><th>Alumini_Id</th><th>Photo</th><th>Name</th><th>Branch</th><th>Status</th></tr>";
+        while($row = mysqli_fetch_array($rs))
+        {
+            echo "<tr>
+                        <td>$row[]</td>
+                        <td><img src="" alt="">$row[]</td>
+                        <td>$row[]</td>
+                        <td>$row[]</td>
+                        <td>$row[]</td>
+                  </tr>";
+        }
+    }
+
+?> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>getCollege</title>
+</head>
+<body>
+    <h1>Government Enginering College-Raipur Alumini</h1>
+
+    <select id="branch">
+        <option selected disabled>Select Branch</option>
+        <option>CSE</option>
+        <option>MECH</option>
+        <option>CIVIL</option>
+    </select>
+    <p id="showDetail"></p>
+</body>
+</html>
+<script>
+        $(document).ready(function(){
+        $("#branch").change(function(){
+            var branch = $("#branch").val();
+            $.post('getCollege.php' , {key : branch} , function(data){
+                $("#showDetail").html(data);
+            });
+        });
+        
+    });
+</script>
