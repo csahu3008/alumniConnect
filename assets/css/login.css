@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: black url('../img/formBg.jpg') fixed center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} .forms {
+    width: 500px;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+} .forms > div {
+    width: 300%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+} .forms form {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    scroll-snap-align: center;
+}.forms input, #submit {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: none;
+} .forms #submit {
+    width: 100px;
+    margin: 10px 0 10px auto;
+    background: #b87f00;
+    color: white;
+} #userIdSpan, #passwordSpan, #nameSpan, #emailSpan,
+  #collegeSpan, #branchSpan, #contactSpan, #semesterSpan,
+  #admissionSpan, #password1Span, #password2Span,
+  #anameSpan, #aemailSpan,
+  #acollegeSpan, #abranchSpan, #acontactSpan, #asemesterSpan,
+  #aadmissionSpan, #apassword1Span, #apassword2Span  {
+    position: relative;
+    top: 40px;
+    left: 15px;
+    color: gray;
+    cursor: text;
+    transition: 500ms;
+} #submit {
+    position: relative;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} #submit::after {
+    content: "";
+    background: #714c0d;
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: block;
+    opacity: 0;
+    transition: all 0.4s;
+} #submit:active:after {
+    width: 0;
+    height: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+} .icons {
+    width: max-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}.icon {
+    background: transparent url('../img/admin-settings-male.png') center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: inline-block;
+    transition: 500ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} #icon2 {
+    background: transparent url('../img/signup.png') center no-repeat;
+    background-size: 90%;
+    transform: scale(0.5);
+} #icon3 {
+    background: transparent url('../img/alumni.svg') center no-repeat;
+    background-size: 90%;
+    transform: scale(0.5);
+} #icon2 > span, #icon3 > span  {
+    margin-left: 95px;
+    padding: 4px;
+    border-radius: 10px;
+    background: #ffffff99;
+    cursor: pointer;
+    font-size: 21px;
+} #icon2 > span {
+    margin-top: 95px;
+    margin-left: 0;
+}#icon1 > span {
+    margin-left: -95px;
+    padding: 4px;
+    border-radius: 10px;
+    background: #ffffff99;
+    cursor: pointer;
+    font-size: 21px;
+}
+#signIn, #register, #alumniRegister {
+    display: inline-block;
+} #register, #alumniRegister {
+    height: 271px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+/* width */
+    #register::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  #register::-webkit-scrollbar-track {
+    background: #00000000; 
+  }
+   
+  /* Handle */
+  #register::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.521); 
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  #register::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.87); 
+  } 
+
+  /* width */
+  #alumniRegister::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  #alumniRegister::-webkit-scrollbar-track {
+    background: #00000000; 
+  }
+   
+  /* Handle */
+  #alumniRegister::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.521); 
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  #alumniRegister::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.87); 
+  } 
+form > h2 {
+    color: white;
+    text-align: center;
+}
+@media only screen and (max-width: 800px) {
+    .forms {
+        width: 100%;
+        margin: auto;
+    } .forms form {
+        width: 90%;
+    }
+}
