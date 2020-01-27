@@ -11,25 +11,22 @@
 
     <?php
 
-    include('../connect.php');
+    // include('../connect.php');
     
     //echo '<div class="table"></div>';
+    $con=mysqli_connect('localhost','root','','alumniconnect');
+    
     $temp = 0;
     echo'<table>
          <thead>
          <th>Sno.</th><th>College Name</th> <th> Category </th> <th> Email </th><th> Contact </th><th> Pincode </th><th> Address </th><th>Show Detail </th>
          </thead>
          <tbody>';
-
-
-        $query = "select * from college where deleted=0";
-        $rs_college = mysqli_query($con,$query);
-
+    $query = "select * from college where deleted=0";
+    $rs_college = mysqli_query($con,$query);
     while($row_college = mysqli_fetch_array($rs_college))
     {
         $clgId = $row_college['id'];
-        
-    
         $temp++;
     
             echo'<td style="text-align:center;">'.$temp.'</td>';  
