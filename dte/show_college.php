@@ -6,8 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
 </head>
+<?php 
+    
+    include("../header.php");
+    
+    include("side_menu.php");
+
+?>
 <body>
-    <h1 class="heading">List of Colleges</h1>
+    <div class="main">
+    <h1 class="heading">Colleges</h1><hr>
 
     <?php
 
@@ -19,6 +27,7 @@
     $temp = 0;
     echo'<table>
          <thead>
+         <tr/>
          <th>Sno.</th><th>College Name</th> <th> Category </th> <th> Email </th><th> Contact </th><th> Pincode </th><th> Address </th><th>Show Detail </th>
          </thead>
          <tbody>';
@@ -29,7 +38,7 @@
         $clgId = $row_college['id'];
         $temp++;
     
-            echo'<td style="text-align:center;">'.$temp.'</td>';  
+            echo'<tr><td style="text-align:center;">'.$temp.'</td>';  
             echo'<td>'.$row_college['college_name'].'</td>';
             echo'<td>'.$row_college['category'].'</td>';
             echo'<td>'.$row_college['email'].'</td>';
@@ -37,12 +46,15 @@
             echo'<td>'.$row_college['pincode'].'</td>';
             echo'<td>'.$row_college['address'].'</td>';
             echo'<td style="text-align:center;"><a href="show_clg_detail.php?cId='.$clgId.'"> Show </a></td>
+                </tr>
 
-            </tbody>
-            </table>';
+            ';
     }
 ?>
+</tbody>
+            </table>
 
+</div>
 
 </body>
 </html>
