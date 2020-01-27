@@ -6,6 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Document</title>
+    <script type="text/javascript">
+        function validation()
+    {
+        var str = document.f1.sName.value;
+
+        if(document.f1.sName.value=="")
+        {
+             alert("Please Enter Name");
+             document.f1.sName.focus();   
+        }
+        else if(isNaN(document.f1.sName.value)==false)
+        {
+            alert("Please Enter Character Type");
+            document.f1.sName.focus();
+        }
+        else if(document.f1.sEmail.value=="")
+        {
+             alert("Please Enter Email");
+             document.f1.sEmail.focus();   
+        }
+        else if(document.f1.sCollege.value=="")
+        {
+             alert("Please Enter College Name");
+             document.f1.sCollege.focus();   
+        }
+        else if(document.f1.sContact.value=="")
+        {
+             alert("Please Enter Contact Number");
+             document.f1.sContact.focus();   
+        }
+        else if(isNaN(document.f1.sContact.value))
+        {
+            alert("Please Enter Mobile Number")
+            document.f1.sContact.focus();
+        }
+        else if(document.f1.sBranch.value=="")
+        {
+             alert("Please Enter Branch Name");
+             document.f1.sBranch.focus();   
+        }
+        else if(document.f1.sSemester.value=="")
+        {
+             alert("Please Enter Your Semester");
+             document.f1.sSemester.focus();   
+        }      
+         else if(isNaN(document.f1.sSemester.value))
+        {
+            alert("Please Enter Semester Number")
+            document.f1.sSemester.focus();
+        }
+        else if(document.f1.sSemester.value1=="1")
+        {
+            alert("Please Enter Password of Length 1");
+            document.f1.sSemester.focus();
+        }
+         else if(document.f1.sAdmission.value=="")
+        {
+             alert("Please Enter Admission Year");
+             document.f1.sAdmission.focus();   
+        }
+       
+        else if(document.f1.password1.value=="")
+        {
+             alert("Please Enter Your Password");
+             document.f1.password1.focus();   
+        }
+        else if(document.f1.password1.value>="8")
+        {
+            alert("Please Enter Password of Length 8");
+            document.f1.password1.focus();
+        }
+        else if(document.f1.password2.value=="")
+        {
+             alert("Please Enter Your Confirm Password");
+             document.f1.password2.focus();   
+        }
+        else if(document.f1.password2.value>="8")
+        {
+            alert("Please Enter Password of Length 8");
+            document.f1.password2.focus();
+        }
+  
+        else
+        {
+            document.f1.submit();
+        }
+    }
+    </script>
 </head>
 <body>
     <?php 
@@ -13,32 +101,32 @@
     ?>
     <div class="form form_signup">
         
-    <form  action='' method='POST' onsubmit="return checkPassword()" >
+    <form  action='' method='POST' name="f1" onsubmit="return checkPassword()" >
         <div class="formIcon"></div>
         <h1 class="formh1">Student Signup</h1>
          <div class="inputs">
              <div>Name</div>
-             <input required  type='text' name='sName'  id=''>
+             <input required  type='text' name='sName'  id='' placeholder="Enter name">
         </div>
         <div class="inputs">
             <div>Email</div>
-            <input  required type='email' name='sEmail'  id=''>
+            <input  required type='email' name='sEmail'  id='' placeholder="eg:ab@hmail.com">
        </div>
        <div class="inputs">
             <div>College</div>
-            <input required     type='text' name='sCollege'  id=''>
+            <input required     type='text' name='sCollege'  id='' placeholder="Enter college name">
         </div>
        <div class="inputs">
             <div>Contact Number</div>
-            <input  required type='text' name='sContact' id=''>
+            <input  required type='text' name='sContact' id='' placeholder="Enter mobile number">
         </div>
             <div class="inputs">
             <div>Branch</div>
-        <input  required  type='text' name='sBranch' id=''>
+        <input  required  type='text' name='sBranch' id='' placeholder="Enter branch name">
         </div>
         <div class="inputs">
             <div>Semester</div>
-            <input required type='text' name='sSemester'  id=''>
+            <input required type='text' name='sSemester'  id='' placeholder="Enter semester number">
         </div>
         <div class="inputs">
             <div>Admission Year</div>
@@ -53,7 +141,7 @@
             <input required  type='password' name='password2'  id='password2'>
         </div>
         
-        <input class="formButton" type="submit" value="Signup" />
+        <input class="formButton" type="button" value="Signup" onClick="validation();">
         <div class="signUpBlock">
             <div>
                 Already have an account
