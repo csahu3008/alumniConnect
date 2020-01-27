@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../jquery-3-4-1.min.js"></script>
+
     <title>Document</title>
 </head>
 <body>
-    <h1>Previously Published Notices</h1>
+    <h1>Published Notices</h1>
     <?php
     session_start();
     $con=mysqli_connect('localhost','root','','alumniconnect');
-    $q="select * from notice where college_id='$_SESSION[college_id]'";
+    $q="SELECT * from notice where college_id=5";
     $res=mysqli_query($con,$q);
     echo"<div>";
     while($row=mysqli_fetch_array($res))
@@ -23,6 +25,12 @@
         echo"</div>";
     }
     echo"</div>";
+    echo"<input type = 'button' onClick=reload() value='Hide Notices'>";
     ?>
 </body>
 </html>
+<script>
+    function reload(){
+        window.location="../student/show_alumni_college.php";
+    }
+</script>

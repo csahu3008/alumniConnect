@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -196,10 +197,7 @@
             return true
          }
 
-    }
-</script>
-</body>
-</html>
+
 <?php
     if(isset($_REQUEST['password1']))
     {
@@ -213,17 +211,18 @@
         $sDesignation=$_REQUEST['sDesignation'];
         $sPassed=$_REQUEST['sPassed'];
         $password=md5($_REQUEST['password1']);
-        $username='s-'.$sContact;
+        $username='a-'.$sContact;
         
 
         $con=mysqli_connect('localhost','root','','alumniconnect');
-        $q="insert into alumni_detail values (null,'$sName','$sEmail','$sContact','$sBranch','$sCollege','$sCompany','$sLocation','$sDesignation',0,'$sPassed') ";
+        $q="insert into alumni_detail values (null,'$sName','$sEmail','$sContact','$sBranch','$sCollege','$sCompany','$sLocation','$sDesignation',0,'$sPassed','$username',0) ";
         $res=mysqli_query($con,$q);
         $q2="insert into logindetail values (null,'$username','$password','','')";
         $res2=mysqli_query($con,$q2);
         if($res and $res2)
            {
-             echo"Your Account is Successfully created with username $username";
+             echo"<script>alert('Your Account is Successfully created with username $username')</script>";
+             echo "<script>window.location='../login.php'</script>";
             }
            else{
              echo"database error or Email id already used";

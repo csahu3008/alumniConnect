@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,10 +163,6 @@
             return true
          }
 
-    }
-</script>
-</body>
-</html>
 <?php
     if(isset($_REQUEST['password1']))
     {
@@ -187,7 +184,8 @@
         $res2=mysqli_query($con,$q2);
         if($res and $res2)
            {
-             echo"Your Account is Successfully created with username $username";
+             echo"<script>alert('Your Account is Successfully created with username $username')</script>";
+             echo "<script>window.location='../login.php'</script>";
             }
            else{
              echo"database error";
