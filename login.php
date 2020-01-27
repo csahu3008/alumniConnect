@@ -16,16 +16,16 @@
         <div>
         <div class="icons">
             <!-- <div> -->
-                <div id="icon1" class="icon" onclick="register('#icon1', '#icon2', '#icon3', '#signIn')"><span>Login</span></div>
-                <div id="icon2" class="icon" onclick="register('#icon2', '#icon1', '#icon3', '#register')"><span>Register as Student</span></div>
-                <div id="icon3" class="icon" onclick="register('#icon3', '#icon1', '#icon2', '#alumniRegister')"><span>Alumni Register</span></div>
+                <div id="icon1" class="icon" onclick="register('#icon1', '#icon2', '#icon3', '#signIn')"><span>Sign In</span></div>
+                <div id="icon2" class="icon" onclick="register('#icon2', '#icon1', '#icon3', '#register')"><span>Student Sign Up</span></div>
+                <div id="icon3" class="icon" onclick="register('#icon3', '#icon1', '#icon2', '#alumniRegister')"><span>Alumni SignUp</span></div>
             <!-- </div> -->
         </div>
         <div class="forms">
             
             <div>
                 <form action="" method="POST" id="signIn">
-                    <h2>Login as student</h2>
+                    <h2>Sign In</h2>
                     <div id="loginForm">
                         <label for="userId"><span id="userIdSpan">username or Email</span>
                             <input required type="text" name="user" id="userId" onfocus="moveUp('userId')" onblur="moveDown('userId')">
@@ -33,12 +33,12 @@
                         <label for="password"><span id="passwordSpan">password</span>
                             <input required type="password" name="pwd" id="password" onfocus="moveUp('password')" onblur="moveDown('password')">
                         </label>
-                        <button id="submit">Log In</button>
+                        <button id="submit">Sign In</button>
                     </div>
                 </form>
                 <!-- signup -->
                 <form action="./register/studentSignup.php" method="POST" id="register" onsubmit="return checkPassword()">
-                    <h2>Signup as student</h2>
+                    <h2>Student Sign Up</h2>
                     <div id="loginForm">
                         <label for="name"><span id="nameSpan">Name</span>
                             <input required type="text" name="sName" id="name" onfocus="moveUp('name')" onblur="moveDown('name')">
@@ -68,12 +68,12 @@
                             <input required type="password" name="password2" id="password2" onfocus="moveUp('password2')" onblur="moveDown('password2')">
                         </label>
                         
-                        <button id="submit">Register</button>
+                        <button id="submit">Sign Up</button>
                     </div>
                 </form>
                 <!-- signup -->
                 <form action="./register/alumniSignup.php" method="POST" id="alumniRegister" onsubmit="return checkPassword()">
-                    <h2>Register as Alumni</h2>
+                    <h2>Alumni Sign Up</h2>
                     <div id="loginForm">
                         <label for="aname"><span id="anameSpan">Name</span>
                             <input required type="text" name="sName" id="aname" onfocus="moveUp('aname')" onblur="moveDown('aname')">
@@ -195,14 +195,20 @@
                      }else{
                         // session_start();
                         $_SESSION['user']=$user;    
-                        echo "Something went wrong. ☹ "; 
+                       // echo "Something went wrong. ☹ "; 
                     }
                 }else{
-                    echo "wrong password";
+                   // echo "<div class='wrong'>wrong password </div>";
+                    ?>
+                <script> alert("Wrong Password"); </script>
+                    <?php
                 }
             }
             else{
-                echo "Username invalid";
+                //echo "<div class='wrong'>Invalid User </div>";
+                ?>
+                <script> alert("Invalid User"); </script>
+                    <?php
             }
         }
     ?>
