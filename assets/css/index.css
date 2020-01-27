@@ -11,6 +11,136 @@
     border-bottom-right-radius: 50% 20%;
     overflow: hidden;
 }
+.section{
+    width:100%;
+    height:150rem;
+    /* background-image:linear-gradient(to right,yellow,white) */
+    border-top-left-radius: 50% 20%;
+    border-top-right-radius: 50% 20%;
+}
+.section1{
+    width: 40%;
+    height: 15%;margin-top:100px;
+    float: left;
+    margin-left: 100px;
+    background: lightgray;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1561489413-985b06da5bee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+.section1 img{
+    width: 100%;
+}
+.section2{
+    height: 15%;
+    Width:40%;
+    margin-top:100px;
+    /* background: lightcoral; */
+    margin-left: 100px;
+ 
+    float: left;
+}
+.section2 p,.section3 p,.section9 p{
+    line-height: 1.5rem;
+}
+.section2 h3,.section9 h3{
+    margin-left:150px;
+    font-size: 50px;
+    font-family: 'Varela Round', sans-serif;
+}
+.section3 h3{
+    margin-left:70px;
+    font-size: 40px;
+    font-family: 'Varela Round', sans-serif;
+}
+.section3{
+    height: 15%;
+    Width:40%;
+    margin-top:100px;
+    /* background: lightcoral; */
+    margin-left: 100px;
+    float: left;
+}
+.section4{
+    height: 15%;
+    Width:40%;
+    margin-top:100px;
+    /* background: lightgray; */
+    margin-left: 100px;
+    float: left;
+    background-size: cover;
+    background-image: url("https://www.simc.edu/img/gallery/large/pic_7.jpg");
+}
+.section5{
+    height: 5%;
+    Width:100%;
+    /* background: lightblue; */
+    margin-top: 100px;
+    float: left;
+}
+.section5 h3{
+    font-size:50px;
+    /* margin-top: 100px; */
+    margin-left:600px;
+    align:center;
+}
+.section6{
+    height: 25%;
+    Width:35%;
+    margin-top:100px;
+    /* background: lightgray; */
+    margin-left: 150px;
+    float: left;
+}
+.section7{
+    height: 25%;
+    width:35%;
+    margin-top:100px;
+    /* background: lightgray; */
+    margin-left: 150px;
+    float: left;
+}
+.section8{
+    width: 40%;
+    height: 15%;margin-top:100px;
+    float: left;
+    margin-left: 100px;
+    background: lightgray;
+    background-size: cover;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTX5aUGq_LMDqjeKWtDOqw1bmK2R-YLe8XDwOwHiyXydLgGLEJ4");
+}
+.section9{
+    height: 15%;
+    Width:40%;
+    margin-top:100px;
+    /* background: lightcoral; */
+    margin-left: 100px;
+ 
+    float: left;
+}
+.img2{
+    width:100%;
+    height:40%;
+    /* background: lightgray; */
+}
+.img1{
+    width: 270px;
+    height: 270px;
+    margin: auto;
+    border-radius:50%;
+    background-size: cover;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5oRimAve9AeNQdkUARaY32XKUpBnCjncuCQJZhoPOcTs1qq33");
+}
+.img3{
+    width: 270px;
+    height: 270px;
+    margin: auto;
+    border-radius:50%;
+    background-size: cover;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQNbA24jLtpfC9j-U0N0fSMHGAW-phlz-GnrmOf2qrZ1ZztnhKy");
+}
+.img2 p{
+    line-height: 1.5rem;
+}
 .web-name{
     font-family: 'Righteous', cursive;
     color:white;
@@ -36,7 +166,7 @@
     color: white;
     font-weight: bold;
     font-size:25px;
-    margin-left:100px;
+    margin-left:40px;
     padding: 10px;
   
 }
@@ -84,20 +214,52 @@
     border-bottom: 3px solid white;
     transition:  0.3s ease 0s, left 0.3s ease 0s;
 }
-.section{
-    width:100%;
-    height:35rem;
-    background: lightcyan;
-    border-top-left-radius: 50% 20%;
-    border-top-right-radius: 50% 20%;
-}
+
 
 .footer{
     width:100%;
     height:10rem;
     background:  #262626;
 }
-
+ul { 
+    margin: 150px auto 0; 
+    padding: 0; 
+    list-style: none; 
+    display: table;
+    width: 600px;
+    text-align: center;
+  }
+  li { 
+    display: table-cell; 
+    position: relative; 
+    padding: 15px 0;
+  }
+ .footer1 a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+  .footer1 a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .footer1 a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
 
 @media only screen and (max-width:600px)
 {

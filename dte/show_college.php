@@ -68,9 +68,11 @@
     <h1 class="heading">List of Colleges</h1>';
 
 
-    include('../connect.php');
+    // include('../connect.php');
     
     //echo '<div class="table"></div>';
+    $con=mysqli_connect('localhost','root','','alumniconnect');
+    
     $temp = 0;
     echo'
          <div class="listHeading"><div>index</div><div>College Name</div> <div> Category </div> <div> Email </div><div> Contact </div><div> Pincode </div><div> Address </div><div>Show Detail </div>
@@ -81,11 +83,10 @@
         $query = "select * from college where deleted=0";
         $rs_college = mysqli_query($con,$query);
 
+
     while($row_college = mysqli_fetch_array($rs_college))
     {
         $clgId = $row_college['id'];
-        
-    
         $temp++;
             echo'<div class="collegeContainer">';
             echo'<div style="text-align:center;">'.$temp.'</div>';  
