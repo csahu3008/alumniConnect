@@ -33,11 +33,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1, .branch {
+            background: cadetblue;
+            padding: 20px;
+            border-radius: 0 0 40px 40px;
+            text-align: center;
+        }.branch {
+            background: darkcyan;   
+        } .selectContainer {
+            background: darkcyan;   
+            border-radius: 0 0 40px 40px;
+        } .selectedBranch > div{
+            padding: 10px;
+            background: #ffffffaa;
+            border-radius: 20px;
+            width: max-content;
+            display: inline-block;
+            margin: 10px 0;
+        } .selectedBranch {
+            display: inline-block;
+        }
+    </style>
     <title>getCollege</title>
 </head>
 <body>
-    <h1>Government Enginering College-Raipur Alumini</h1>
-
+    <div class="selectContainer">
+        <h1>Government Enginering College-Raipur Alumini</h1>
+        <div class="branch">
+            <div class="selectedBranch"><div>Computer Science and Engineering</div></div>
+            <div class="selectedBranch"><div>Mechanical Engineering</div></div>
+            <div class="selectedBranch"><div>Civil Engineering</div></div>
+            <div class="selectedBranch"><div>Electrical Engineering</div></div>
+            <div class="selectedBranch"><div>Marine Engineering</div></div>
+        </div>
+    </div>
     <select id="branch">
         <option selected disabled>Select Branch</option>
         <option>CSE</option>
