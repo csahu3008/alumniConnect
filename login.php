@@ -40,38 +40,38 @@
             $user=$_REQUEST['user'];
             $pwd=md5($_REQUEST['pwd']);
 
-            $dsn = 'mysql:host=localhost;dbname=codeutsava';
+            $dsn = 'mysql:host=localhost;dbname=alumniconnect';
             $pdo = new PDO($dsn,'root','');
             $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
-            $sql = 'SELECT * FROM login_detail where user=?';
+            $sql = 'SELECT * FROM logindetail where username=?';
 
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$user]);
 
             $row=$stmt->fetch();
             if($row){
-                if($row->pass==$pwd){
+                // if($row->password==$pwd){
                     echo "logged in";
-                    if($user[0]=='f'){
-                        session_start();
-                        $_SESSION['farmer']=$user;
-                        header("location:../farmer/show_prd_farm.php");
-                    }else if($user[0]=='w'){
-                        echo "Warehouse";
-                        session_start();
-                        $_SESSION['warehouse']=$user;
-                        header("location:../warehouse/show_contact.php");
-                     }else if($user[0]=='c'){
-                        session_start();
-                        $_SESSION['customer']=$user;
-                        header("location:../customer/products.php");
-                    }else{
-                        echo "Something went wrong. ☹ "; 
-                    }
-                }else{
-                    echo "wrong password";
-                }
+                //     if($user[0]=='f'){
+                //         session_start();
+                //         $_SESSION['farmer']=$user;
+                //         header("location:../farmer/show_prd_farm.php");
+                //     }else if($user[0]=='w'){
+                //         echo "Warehouse";
+                //         session_start();
+                //         $_SESSION['warehouse']=$user;
+                //         header("location:../warehouse/show_contact.php");
+                //      }else if($user[0]=='c'){
+                //         session_start();
+                //         $_SESSION['customer']=$user;
+                //         header("location:../customer/products.php");
+                //     }else{
+                //         echo "Something went wrong. ☹ "; 
+                //     }
+                // }else{
+                //     echo "wrong password";
+                // }
             }
             else{
                 echo "Username invalid";
