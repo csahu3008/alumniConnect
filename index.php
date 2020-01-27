@@ -51,7 +51,7 @@ Many of them have become influential working professionals​ which can help out
           <!-- <img src="assets/images/events.png" alt=""> -->
           <h3>Events</h3>
         </div>
-        <div class="section6">
+        <div class="section7">
             <div class="img1"></div>
             <div class="img2"><br><br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae non quo suscipit provident voluptatibus temporibus aut tenetur quibusdam, nemo quos exercitationem quaerat vel maiores veritatis impedit accusantium totam ex in!Suscipit animi voluptatum distinctio error quod dolore natus quidem quae<br> eveniet ullam enim aut eos delectus quam excepturi, itaque sapiente, quia quas tenetur dolorem impedit veniam! Culpa, ipsa. Velit, id.</p>
@@ -60,18 +60,11 @@ Many of them have become influential working professionals​ which can help out
         <div class="section7">
             <div class="img3"></div>
             <div class="img2"><br><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ipsam quidem alias libero quo? Ullam <br>incidunt ea culpa laborum fugit libero rerum delectus id at veritatis, magni nostrum voluptate dolor.Quia ullam saepe hic illum ea provident eligendi eum harum exercitationem nam sequi beatae, commodi numquam consequatur repellendus, voluptatibus, cum quae facere non. Tempore voluptate consequuntur libero pariatur illo id?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ipsam quidem alias libero quo? Ullam incidunt ea culpa laborum fugit libero rerum delectus id at veritatis, magni nostrum voluptate dolor.Quia ullam saepe hic illum ea provident eligendi eum harum exercitationem nam sequi beatae, commodi numquam consequatur repellendus, voluptatibus, cum quae facere non. Tempore voluptate consequuntur libero pariatur illo id?</p>
             </div>             
          </div> 
-         <div class="section8"></div>
-        <div class="section9">
-          <!-- <img src="assets/images/group.png" alt=""> -->
-          <h3>Group Chat</h3><br><br><br>         
-           <p>The sole purpose of the  once part of the institute. When they come to the alumni meet, people of different year be it junior or senior they just interact with each other and network.
-
-         <br> sole purpose of the alumni meet is to get together all of the people who were once part of the institute. When they come to the alumni meet, people of different year be it junior or senior they just interact with each other and network.
-
-            Many of them have become influential working professionals​ which can help out the current students at the institute as well as their batch mates. professionals​ which can help out the current students at the institute as well as their batch mates.</p>
+        <div class="groupchat-section">
+             <div class="groupchat-section1"></div>
         </div>
 
     </section>
