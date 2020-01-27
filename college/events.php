@@ -31,10 +31,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    
 </head>
 <body>
     <a href='seeEvents.php'> See Previous Events</a>
-    <form method='post' >
+    <form method='post'>
     <h1>Add Event </h1>
     <div>
         <label>Title</label>
@@ -56,7 +57,7 @@
         <label>Venue</label>
         <input type='text' name='venue'>
     </div>
-    <input type="submit" value='add Event' />
+    <input type="submit" value='add Event'>
     </form>
 </body>
 </html>

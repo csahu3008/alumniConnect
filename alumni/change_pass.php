@@ -1,6 +1,4 @@
 <?php
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,26 +6,29 @@
 	<title></title>
 	<script type="text/javascript">
 		function validation()
-		{
-			var password = document.getElementById("userpass");
-			if(password.value="")
+		 {
+			var str = document.f1.userpass.value;
+			if(document.f1.userpass.value=="")
 			{
-				alert("Enter valid pasword");
+			     alert("Please Enter valid Password");
+			     document.f1.userpass.focus();	
 			}
-		}
+			
+
+		 	else
+		 	{
+		 		document.f1.submit();
+
+		 	}
+		 }
 	</script>
 </head>
 <body>
-	<form action="process_pass.php" method="post">
+	<form action="process_pass.php" name="f1" >
 <h2>Change Password</h2>
-
-		
-		Email:<input type="text" name="email"><br>
-	    Password: <input type="text" name="userpass"><br>
-	    Confirm Password: <input type="text"><br>
-		
-		<button onclick="validation()"type="submit">Update Password</button>
+		Email:<input type="text" name="email" id='email'><br>
+	    Password: <input type="text" name='userpass'><br>
+	    <input type="button" value='Update Password' onClick="validation();">
 	</form>
-
 </body>
 </html>
