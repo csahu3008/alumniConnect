@@ -46,13 +46,9 @@ Many of them have become influential working professionals​.</p><br><p> which 
 
 Many of them have become influential working professionals​ which can help out the current students at the institute as well as their batch mates.</p>
         </div>
-        <div class="section4">
-        <!-- <h3>Events</h3> -->
-            <!-- <img src="assets/images/status.png" alt="" class="sec-img"> -->
-<!--           
-        </div>
+        <div class="section4"></div>
         <div class="section5">
-          <img src="assets/images/events.png" alt="">
+          <!-- <img src="assets/images/events.png" alt=""> -->
           <h3>Events</h3>
         </div>
         <div class="section6">
@@ -69,12 +65,25 @@ Many of them have become influential working professionals​ which can help out
             </div>
             <div class="img2">
                 
-            </div>             -->
-        <!-- </div> -->
+            </div>             -
+         </div> 
     </section>
 
     <footer class="footer">
+        <div class="footer1" style="width:100%;height:70%;">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">About</a></li>
+             <li><a href="#">FAQ</a></li>
+             <li><a href="#">Help</a></li>
+        </ul>
 
+        </div>
+        <hr style="backgroung:white;">
+        <div class="footer2">
+            <p style="text-align:center;font-size:25px;color:white;padding:10px;">Made By <span style="color:white;font-weight:bold;">Step_Ahead</span></p>
+        </div>
     </footer>
 </body>
 </html>
