@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="../jquery-3-4-1.min.js"></script>
+    <script src="https://kit.fontawesome.com/a8180108be.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Righteous|Varela+Round&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href = "../assets/css/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../assets/css/dashboard.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Document</title>
+
 </head>
-<body>
-    <h1>Published Notices</h1>
-    <?php
+
+<body style= "font-family: 'Varela Round', sans-serif;overflow:hidden;">
+	<div class="header"> 
+    
+    	<h1 class="title"> ALUMS  </h1>
+        
+        <a href="#" onClick="return confirm('Are You Sure??')" title="Logout">
+       
+		<i class="fas fa-sign-out-alt" style="font-size: 18px"></i>
+        </a>
+         
+        <a href="../index.php"><h4 class="home">Home</h4> </a>
+        
+    </div>
+    <div class="menu">
+        <h3> MAIN NAVIGATION </h3>
+        <ul>
+            <li><a href="./showAlumni.php">ShowAlumni</a></li>
+            <li><a href="./seeEvents.php">ShowEvents</a></li>
+            <li><a href="./seeNotice.php">ShowNotices</a></li>
+            <li><a href="./approveAlumni.php">ApproveRequest</a></li>
+        </ul>
+    </div>
+
+
+<div style="width:50rem;height:40rem;margin-left:250px;margin-top:120px;">
+      
+        <h2 style="margin-left:17px;font-size:30px;margin-top:10px;"><span style="color:green;">Notices</span></h3>
+        <hr><br>
+        <?php
     session_start();
     $con=mysqli_connect('localhost','root','','alumniconnect');
     $q="SELECT * from notice where college_id=5";
@@ -18,19 +46,20 @@
     echo"<div>";
     while($row=mysqli_fetch_array($res))
     {  
-        echo"<div style='border:2px solid red;' >";
-        echo"<p>$row[published_date]</p>";
-        echo"<h3>$row[title]</h3>";
+        echo"<div style='border:2px solid purple;margin-top:40px;padding:50px;' >";
+        echo"<p>$row[published_date]</p><br>";
+        echo"<h3 style='color:purple;'>$row[title]</h3><br>";
         echo"<p>$row[description]</p>";
         echo"</div>";
     }
     echo"</div>";
-    echo"<input type = 'button' onClick=reload() value='Hide Notices'>";
+    echo"<input type = 'button' onClick=reload() value='Hide Notices' class='hid-but'>";
     ?>
+</div>
 </body>
 </html>
 <script>
     function reload(){
-        window.location="../student/show_alumni_college.php";
+        window.location="./home.php";
     }
 </script>
