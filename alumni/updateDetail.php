@@ -54,7 +54,7 @@
         $deleted_query="update  alumni_detail set deleted=1 where username='$_SESSION[user]'";
         $res=mysqli_query($con,$deleted_query);
         if($res){
-            echo"success";
+         
             $name=$_REQUEST['name'];
             $email=$_REQUEST['email'];
             $contact=$_REQUEST['contact'];
