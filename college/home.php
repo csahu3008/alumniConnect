@@ -37,6 +37,7 @@
         <h3> MAIN NAVIGATION </h3>
         <ul>
             <li><a href="./showAlumni.php">ShowAlumni</a></li>
+            <li><a href="./events.php">AddEvents</a></li>
             <li><a href="./seeEvents.php">ShowEvents</a></li>
             <li><a href="./seeNotice.php">ShowNotices</a></li>
             <li><a href="./approveAlumni.php">ApproveRequest</a></li>
@@ -91,7 +92,7 @@
 </div>
 </a> -->
 <div style="width:50rem;height:10rem;margin-left:250px;margin-top:120px;">
-    <p style="padding:10px;font-size:70px;">Hello <?php echo '$_SESSION[user]';?></p>
+    <p style="padding:10px;font-size:70px;">Hello <?php echo $_SESSION['user'];?></p>
     <hr>
     <h2 style="margin-left:17px;font-size:30px;margin-top:10px;">Welcome To <span style="color:green;">ALUM</span></h3>
 </div>

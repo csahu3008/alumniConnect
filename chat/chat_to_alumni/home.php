@@ -7,9 +7,10 @@
     <title>Web Messenger</title>
     <script src="https://kit.fontawesome.com/15e3edaa10.js" crossorigin="anonymous"></script>
     <link rel = "stylesheet" href = "style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Righteous|Varela+Round&display=swap" rel="stylesheet">
     <script src =  "../../jquery-3-4-1.min.js"></script>
 </head>
-<body>
+<body style="overflow:hidden">
 
     <?php
             $con = mysqli_connect('localhost' , 'root' , '' , 'alumniconnect');
@@ -52,8 +53,9 @@
                     </div> 
            </div>
            <div class="sample-text">
-                <h3>Hello user !!</h3>
+                <h3>Hello <span style="color:green"><?php echo "$";?></span></h3>
                 <p>Click on any person to chat</p>
+                <img src="chat2.jpg" alt="" class="hii-user">
            </div>
         </div> 
     </div> 
