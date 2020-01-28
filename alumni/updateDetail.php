@@ -1,18 +1,4 @@
 <?php
-<<<<<<< HEAD
-session_start();
-if(!(isset($_SESSION['user']))){
-    echo "<script>window.location='../login.php'</script>";
-}else{
-    $user=$_SESSION['user'];
-    if(!($user[0]=='a')){
-        echo "<script>alert('Only Alumni can enter..')</script>";
-        echo "<script>window.location='../login.php'</script>";
-    }
-}
-?>
-
-=======
 	session_start();
 	if(!(isset($_SESSION['user']))){
 		echo "<script>window.location='../login.php'</script>";
@@ -24,7 +10,6 @@ if(!(isset($_SESSION['user']))){
 		}
 	}
 ?>
->>>>>>> 72dc246b7de0c9f108c23fe85e4e9acdf195efd4
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,10 +59,6 @@ if(!(isset($_SESSION['user']))){
     <div class="form-updatealum">
     <?php
     // session_start();
-<<<<<<< HEAD
-    // $_SESSION['user']='a-007';
-=======
->>>>>>> 72dc246b7de0c9f108c23fe85e4e9acdf195efd4
     $con=mysqli_connect('localhost','root','','alumniconnect');
     $query = "select * from  alumni_detail where deleted=0 and username='$_SESSION[user]'";
     $res = mysqli_query($con,$query);
