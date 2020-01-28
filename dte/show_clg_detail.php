@@ -1,44 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<?php 
+    
+    include("../header.php");
+    
+    include("side_menu.php");
+
+?>
    <script  src='../jquery-3-4-1.min.js'></script>
-    <title></title>
+    <title>Alums</title>
     <style>
-        * {
+         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         } html {
             min-width: 700px;
         }
-        h1{
-            background: cadetblue;
-            padding: 20px;
+        h1, .branch {
+            padding-top: 40px;
+            padding-bottom: 20px;
             border-radius: 0 0 40px 40px;
             text-align: center;
+            color: #999999;
         }
         .listHeading, .collegeContainer {
             display: grid;
-            grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+            grid-template-columns: 6% 14.5% 12.5% 16.5% 12.5% 12.5% 12.5% 12.5%;
             padding: 10px;
+            text-align: center;
         }.listHeading > div, .collegeContainer > div {
             margin: 10px;
             padding: 5px;
             background: #ffffffaa;
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
             overflow-x: auto;
         } .headContainer {
-            background: darkcyan;
+            background-image: linear-gradient(to right,#710193,#BCA0DC);
         } .collegeContainer {
-            border-bottom: 2px dashed blue;
+            border-bottom: 1px solid #999999;
         } .listContainer {
             box-shadow: 0 -3px 15px -4px;
         }
-
     div::-webkit-scrollbar {
         width: 0px;
         height: 0;
@@ -121,7 +123,6 @@
                     $val=$_REQUEST['cId'];
                     echo"<select name='branch' >";
                     echo"<option></option>";
-                    $con=mysqli_connect('localhost','root','','alumniconnect');
                     $cId = $_REQUEST['cId'];
                     $query="select * from branch_detail where cid=$cId";
                     $res=mysqli_query($con,$query);
@@ -137,7 +138,6 @@
     </form>
     <span>
     <?php
-    $con=mysqli_connect('localhost','root','','alumniconnect');
 
     $cId = $_REQUEST['cId'];
     

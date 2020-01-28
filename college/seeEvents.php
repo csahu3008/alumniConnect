@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>SeeEvents</title>
 </head>
 <body>
     <?php
     session_start();
     $con=mysqli_connect('localhost','root','','alumniconnect');
-    $q="select * from event where college_id='$_SESSION[user]'";
+    $q="SELECT * from event where college_id=5";
     $res=mysqli_query($con,$q);
     echo"<div>";
     while($row=mysqli_fetch_array($res))
@@ -24,6 +24,13 @@
         echo"</div>";
     }
     echo"</div>";
+    echo"<input type = 'button' onClick=reload() value='Hide Notices'>";
+
     ?>
 </body>
 </html>
+<script>
+    function reload(){
+        window.location="../student/show_alumni_college.php";
+    }
+</script>

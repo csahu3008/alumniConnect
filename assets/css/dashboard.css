@@ -1,0 +1,132 @@
+*
+{
+	margin:0px;
+	padding:0px;
+	font-family: 'Varela Round', sans-serif;
+}
+.menu
+		{
+			height:640px;
+			width:14%;
+			background-image: linear-gradient(to bottom,#710193,#800080);
+			margin-top:45px;
+			float: left;
+			position: fixed;
+			top:0px;
+		}
+		.menu h3
+		{
+			color:#999;
+			font-size:12px;
+			margin-left:4px;
+			padding: 20px
+		}
+		.menu ul
+		{
+			margin-top:15px;
+			width:14%;
+		}
+		.menu ul li
+		{
+			height:40px;
+		}
+		.menu ul li a:hover
+		{
+			color:#BDB7AB;
+		}
+		.menu ul li a
+		{	
+			line-height:30px;
+			color:white;
+			font-size:14px;
+			text-decoration:none;
+			margin-left:20px;		
+		}	
+		.menu li:hover ul
+		{
+			display:block;
+			margin-top:-10px;
+			position:absolute;
+			margin-left:60px;
+			z-index:15px;
+		}
+	.module{
+			height:180px;
+			width:280px;
+			float: left;
+			margin-left:100px;
+			margin-top:80px;
+			box-shadow:0 0 5px rgba(0,0,0,0.3);
+			border:1px #C7C6C1 solid;
+		}
+	.module:hover{
+		box-shadow:0 0 10px rgba(0,0,0,0.3);
+	}
+	.icon{
+			font-size: 50px;
+			float: right;
+			margin: 16px;
+			color: #F1F3F4
+	}
+	.module_title{
+		float: left;
+		font-size: 20px;
+		margin: 15px;
+		color: #999999;
+	}
+	.num{
+		font-size: 40px;
+		color: #999999;
+		margin-top:80px;
+		margin-left:20px 
+	}
+
+	.header
+		{
+			width:100%;
+			height:45px;
+			background-image: linear-gradient(to right,#710193,#800080);
+			color:white;
+			border-bottom:solid #666 1px;
+			box-shadow:0 0 12px rgba(98,98,98,0.32);
+			margin: 0px;
+			padding: 0px;
+			position: fixed;
+			top:0px;
+		}
+		.header > h1
+		{
+			float: left;
+
+		}
+		.header > h4
+		{
+			color:white;
+		}
+		.header > a
+		{
+			float: right;
+		}
+		.header > a
+		{
+			color: #FFFFFF;
+			font-size: 10px;
+		}
+		.title
+		{
+			padding:5px;
+			font-family: 'Righteous', cursive;
+		    color:white;
+		    font-weight: 10; 
+		}
+		.header > a  
+		{
+			font-size: 15px;
+			text-decoration: none;
+			margin:15px;
+			margin-left: 30px;
+		}
+		.main{
+			margin-left: 220px;
+			margin-top: 20px;
+		}

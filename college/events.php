@@ -116,6 +116,7 @@
         <input required type="text" name="venue" id="venue" onfocus="moveUp('venue')" onblur="moveDown('venue')">
     </label>
     <input type="submit" id="submit" value='add Event' />
+
     </form>
     <script>
     function initialCall() {

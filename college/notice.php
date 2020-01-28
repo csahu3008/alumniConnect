@@ -3,7 +3,6 @@
  {
     session_start();
     $_SESSION['college_id']='5';
-
     $title=$_REQUEST['title'];
     $description=$_REQUEST['description'];
     $published_date = date('Y-m-d H:i:s');

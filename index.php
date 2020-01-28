@@ -7,6 +7,8 @@
     <title>ALUMS</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel = "stylesheet" href = "assets/css/fontawesome/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a8180108be.js" crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Righteous|Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>

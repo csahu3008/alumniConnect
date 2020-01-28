@@ -14,7 +14,7 @@
         
 
         $con=mysqli_connect('localhost','root','','alumniconnect');
-        $q="insert into student values ('$username','$sName','$sEmail','$sCollege','$sBranch',$sSemester,$sAdmission,0,0,0) ";
+        $q="insert into student values (null,'$sName','$sEmail','$sCollege','$sBranch',$sSemester,$sAdmission,0,0,'$username',0) ";
         $res=mysqli_query($con,$q);
         $q2="insert into logindetail values (null,'$username','$password','','')";
         $res2=mysqli_query($con,$q2);
