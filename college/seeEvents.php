@@ -49,7 +49,7 @@
         <h3> MAIN NAVIGATION </h3>
         <ul>
             <li><a href="./showAlumni.php">ShowAlumni</a></li>
-            <li><a href="./seeEvents.php">ShowEvents</a></li>
+            <li><a href="./events.php">AddEvents</a></li>
             <li><a href="./seeNotice.php">ShowNotices</a></li>
             <li><a href="./approveAlumni.php">ApproveRequest</a></li>
         </ul>
@@ -68,21 +68,21 @@
             echo"<div>";
         while($row=mysqli_fetch_array($res))
         {  
-            echo"<div style='border:2px solid purple;margin-top:40px;padding:50px;' >";
-            echo"<p>$row[published_date]</p>";
+            echo"<div style='border:2px solid gray;margin-top:40px;padding:50px;' >";
+            echo"<p><span style='font-weight:bold;'>Published On :</span>$row[published_date]</p>";
             echo "<br>";
             echo"<h3 style = 'color:purple;'>$row[title]</h3>";
             echo "<br>";
-            echo"<p><span>$row[event_date]<span><span>$row[event_time]<span></p>";
+            echo"<p><span style='font-weight:bold;'>Published On :</span><span>$row[event_date]<span><span>$row[event_time]<span></p>";
             echo "<br>";
-            echo"<p>Venue - $row[venue] </p>";
+            echo"<p><span style='font-weight:bold;'>Venue :</span> $row[venue] </p>";
             echo "<br>";
             echo"<p>$row[description]</p>";
             echo "<br>";
             echo"</div>";
         }
             echo"</div>";
-            echo"<input type = 'button' onClick=reload() value='Hide Events' class='hid-but'>";
+            echo"<input type = 'button' onClick=reload() value='Back' class='hid-but'>";
 
         ?>
 </div>
