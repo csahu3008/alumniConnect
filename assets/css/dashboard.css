@@ -40,14 +40,14 @@
 			color:white;
 			font-size:14px;
 			text-decoration:none;
-			margin-left:20px;		
+			margin-left:10px;		
 		}	
 		.menu li:hover ul
 		{
 			display:block;
 			margin-top:-10px;
 			position:absolute;
-			margin-left:60px;
+			margin-left:40px;
 			z-index:15px;
 		}
 	.module{
