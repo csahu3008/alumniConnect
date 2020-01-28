@@ -9,8 +9,9 @@
 			height:640px;
 			width:14%;
 			background-image: linear-gradient(to bottom,#710193,#800080);
-			margin-top:25px;
+			margin-top:45px;
 			float: left;
+			top:0px;
 			position: fixed;
 		}
 		.menu h3
@@ -129,17 +130,7 @@
 			margin-left: 220px;
 			margin-top: 20px;
 <<<<<<< HEAD
-			padding-top: 50px;
-		}
-		
-		.heading{
-			color: #999999;
-			padding-bottom: 17px;
-		}
-		.main> a{
-			text-decoration: none;
-			padding-left: 0px;
-			padding: 15px;
+
 =======
 		}
 		.hid-but{

@@ -1,9 +1,16 @@
 <?php
-
-include("../header.php");
-    
-include("side_menu.php");
-
+    include("../header.php");
+?>
+    <div class="menu">
+        <h3> MAIN NAVIGATION </h3>
+        <ul>
+            <li><a href="./showAlumni.php">ShowAlumni</a></li>
+            <li><a href="./seeEvents.php">ShowEvents</a></li>
+            <li><a href="./seeNotice.php">ShowNotices</a></li>
+            <li><a href="./approveAlumni.php">ApproveRequest</a></li>
+        </ul>
+    </div>
+<?php
  if(isset($_REQUEST['title']))
  {
     session_start();
