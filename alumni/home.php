@@ -42,10 +42,12 @@
     <div class="menu">
         <h3> MAIN NAVIGATION </h3>
         <ul>
-            <li><a href="./change_pass.php">Change_pass</a></li>
+            <li><a href="./change_pass.php">Change_password</a></li>
+            <li><a href="./updateDetail.php">Update_Details</a></li>
             <li><a href="./alumniEvent.php">Event_submit</a></li>
-            <li><a href="./allEvents.php">AllEvents</a></li>
+            <li><a href="./allEvents.php">All_Events</a></li>
             <li><a href="../chat/chat_to_alumni/home.php">Chat</a></li>
+            <li><a href="../logout.php">Logout</a></li>
         </ul>
     </div>
 
@@ -97,10 +99,10 @@
 </div>
 </a> -->
 <div style="width:50rem;height:10rem;margin-left:250px;margin-top:120px;">
-    <p style="padding:10px;font-size:70px;">Hello <?php echo '$_SESSION[user]';?></p>
+    <p style="padding:10px;font-size:70px;">Hello <?php echo "$_SESSION[user]";?></p>
     <hr>
     <h2 style="margin-left:17px;font-size:30px;margin-top:10px;">Welcome To <span style="color:green;">ALUM</span></h3>
 </div>
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3_izZkBD9SZpYDfL69HjehgqYLfpWw0E7ND5ADltb5WBzLnvd" alt="" style="margin-left:350px;margin-top:50px;">
 </body>
-</html>
+</html> 
