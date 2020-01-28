@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Righteous|Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/login.css">
     <title>Login Page</title>
 </head>
@@ -27,10 +28,10 @@
                 <form action="" method="POST" id="signIn">
                     <h2>Sign In</h2>
                     <div id="loginForm">
-                        <label for="userId"><span id="userIdSpan">username or Email</span>
+                        <label for="userId"><span id="userIdSpan">Username or Email</span>
                             <input required type="text" name="user" id="userId" onfocus="moveUp('userId')" onblur="moveDown('userId')">
                         </label>
-                        <label for="password"><span id="passwordSpan">password</span>
+                        <label for="password"><span id="passwordSpan">Password</span>
                             <input required type="password" name="pwd" id="password" onfocus="moveUp('password')" onblur="moveDown('password')">
                         </label>
                         <button id="submit">Sign In</button>

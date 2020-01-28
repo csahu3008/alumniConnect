@@ -43,6 +43,7 @@
     <div class="menu">
         <h3> MAIN NAVIGATION </h3>
         <ul>
+		<li><a href="./home.php" style="font-weight:bold;">Dashboard</a></li>
             <li><a href="./change_pass.php">Change_password</a></li>
             <li><a href="./updateDetail.php">Update_Details</a></li>
             <li><a href="./alumniEvent.php">Event_submit</a></li>
@@ -74,10 +75,10 @@
 
 
 		
-		<label>Username :</label><input type="text" name="email" value="<?php echo $user;?>" readonly><br>
-	    <label>New Password: </label><input type="text" name="userpass"><br>
-	    <label>Confirm Password: </label><input type="text"><br>
-		<button onclick="validation()"type="submit">Update Password</button>
+		<label>Username :</label><input type="text" name="email" value="<?php echo $user;?>" readonly class='input1cgnpass'><br><br><br>
+	    <label>New Password: </label><input type="text" name="userpass"  class='input2cgnpass'><br><br><br>
+	    <label>Confirm Password: </label><input type="text"  class='input3cgnpass'><br><br><br>
+		<input type="submit" onclick="validation()" value="Update Password">
 	</form>
 
 </body>

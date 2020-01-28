@@ -187,8 +187,87 @@
 		}
 		.changepass_form label{
 			font-size:20px;
-			margin-top:30px;
+			/* margin-top:30px; */
 		}
 		.changepass_form input{
-			
+			width:200px;
+			height:30px;
+			outline: none;
+			border:none;
+			border-radius: 5px;
+			border:1px solid purple;
+			padding: 5px;
+		}
+		.changepass_form .input1cgnpass{
+			margin-left: 100px;
+		}
+		.changepass_form .input2cgnpass{
+			margin-left: 55px;
+		}
+		.changepass_form .input3cgnpass{
+			margin-left: 20px;
+		}
+		.changepass_form input[type="submit"]
+		{
+			width:170px;
+			height:40px;
+			padding: 10px;
+			font-size: 16px;
+			color: white;
+			cursor: pointer;
+			background: purple;
+			font-weight: bold;
+		}
+		.reqevent-form{
+			width:70%;
+			height:500px;
+			margin-left: 16rem;
+			margin-top: -90px;
+		}
+		.insertText{
+			font-size: 19px;
+			margin-top:30px;
+			/* font-weight: bold; */
+		}
+		.reqevent-form input{
+			margin-top:10px;
+			margin-left: 30px;
+			padding: 5px;
+			width:280px;
+			height: 15px;
+			border: none;
+			border: 1px solid gray;
+			outline: none;
+			border-radius:4px;
+		}
+		.reqevent-form textarea{
+			border: none;
+			border: 1px solid gray;
+			padding: 5px;
+			border-radius:4px;
+			outline: none;
+			margin-left:30px;
+
+		}
+		.reqevent-form input[type="submit"]{
+			width:150px;
+			height:35px;
+			border: none;
+			outline: none;
+			background: purple;
+			color: white;
+			font-size: 17px;
+			cursor: pointer;
+		}
+		.all_eve{
+			width:40rem;
+			height:250px;
+			margin-top: 40px;
+			padding: 15px;
+			border-radius: 5px;
+			margin-left:20rem;
+			border: 1px solid gray;
+		}
+		.all_eve p,h3{
+			margin-left: 30px;
 		}

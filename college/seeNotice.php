@@ -10,7 +10,7 @@
 
 </head>
 
-<body style= "font-family: 'Varela Round', sans-serif;overflow:hidden;">
+<body style= "font-family: 'Varela Round', sans-serif;">
 	<div class="header"> 
     
     	<h1 class="title"> ALUMS  </h1>
@@ -26,6 +26,7 @@
     <div class="menu">
         <h3> MAIN NAVIGATION </h3>
         <ul>
+        <li><a href="./home.php" style="font-weight:bold;">Dashboard</a></li>
             <li><a href="./showAlumni.php">ShowAlumni</a></li>
             <li><a href="./events.php">AddEvents</a></li>
             <li><a href="./seeEvents.php">ShowEvents</a></li>

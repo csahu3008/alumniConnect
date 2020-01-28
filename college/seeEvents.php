@@ -48,6 +48,7 @@
     <div class="menu">
         <h3> MAIN NAVIGATION </h3>
         <ul>
+        <li><a href="./home.php" style="font-weight:bold;">Dashboard</a></li>
             <li><a href="./showAlumni.php">ShowAlumni</a></li>
             <li><a href="./events.php">AddEvents</a></li>
             <li><a href="./seeNotice.php">ShowNotices</a></li>
@@ -73,7 +74,7 @@
             echo "<br>";
             echo"<h3 style = 'color:purple;'>$row[title]</h3>";
             echo "<br>";
-            echo"<p><span style='font-weight:bold;'>Published On :</span><span>$row[event_date]<span><span>$row[event_time]<span></p>";
+            echo"<p><span style='font-weight:bold;'>Event On :</span><span>$row[event_date]<span><span>$row[event_time]<span></p>";
             echo "<br>";
             echo"<p><span style='font-weight:bold;'>Venue :</span> $row[venue] </p>";
             echo "<br>";

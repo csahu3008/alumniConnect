@@ -42,6 +42,7 @@
     <div class="menu">
         <h3> MAIN NAVIGATION </h3>
         <ul>
+        <li><a href="./home.php" style="font-weight:bold;">Dashboard</a></li>
             <li><a href="./change_pass.php">Change_password</a></li>
             <li><a href="./updateDetail.php">Update_Details</a></li>
             <li><a href="./alumniEvent.php">Event_submit</a></li>
