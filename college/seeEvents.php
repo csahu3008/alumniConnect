@@ -61,9 +61,12 @@
         <h2 style="margin-left:17px;font-size:30px;margin-top:10px;"><span style="color:green;">Events</span></h3>
         <hr>
         <?php
-          
             $con=mysqli_connect('localhost','root','','alumniconnect');
-            $q="SELECT * from event where college_id=5";
+            $query="select id from college where email='$_SESSION[user]'";
+            $res1=mysqli_query($con,$query);
+            if($row1=mysqli_fetch_array($res1)) 
+            {
+            $q="SELECT * from event where college_id=$row1[id]";
             $res=mysqli_query($con,$q);
             echo"<div>";
         while($row=mysqli_fetch_array($res))
@@ -81,6 +84,7 @@
             echo "<br>";
             echo"</div>";
         }
+    }
             echo"</div>";
             echo"<input type = 'button' onClick=reload() value='Back' class='hid-but'>";
 
