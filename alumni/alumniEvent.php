@@ -1,3 +1,16 @@
+<?php
+session_start();
+if(!(isset($_SESSION['user']))){
+    echo "<script>window.location='../login.php'</script>";
+}else{
+    $user=$_SESSION['user'];
+    if(!($user[0]=='a')){
+        echo "<script>alert('Only Alumni can enter..')</script>";
+        echo "<script>window.location='../login.php'</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +22,9 @@
 </head>
 <body>
     <?php 
-        //require_once('../assets/partials/header.php');
-
-    //session_start();
-    //if(!(isset($_SESSION['farmer']))){
-    //    header("location:../registration/login.php");
-    //}
-  
+        // if($_GET['ok']){
+        //     echo "<script>alert('Event Requested to the college')</script>";
+        // }
     ?>
     <h1 > Request for conduct event </h1>
 
@@ -27,10 +36,10 @@
         <input type="text" name="title" required>
         </div>
         <div class="fields"><div  class="insertText"> Date </div>
-        <input type="date" name="event_date">
+        <input type="date" name="event_date" required>
         </div>
         <div class="fields"><div  class="insertText"> Time </div>
-        <input type="time" name="event_time">
+        <input type="time" name="event_time" required>
         </div>
         <div class="fields"><div  class="insertText"> Description </div>
         <textarea rows="5" cols="69" style="resize: none;" name="des" required> </textarea>

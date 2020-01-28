@@ -8,7 +8,7 @@
 
 
 <a href="dashboard.php">
-<div class="module" style="margin-left: 150px"> 
+<div class="module" style="margin-left: 350px"> 
 	<div class="module_title">
 		My Account
 	</div>
@@ -44,7 +44,6 @@
 	<i class="fas fa-plus icon"></i> <br>	
 	<?php
      
-	 	include("../connect.php");
 		$query = "select * from alumni_detail where deleted=0";
 		$cat = mysqli_query($con,$query);
 		$num = mysqli_num_rows($cat);

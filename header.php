@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <head>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Righteous|Varela+Round&display=swap" rel="stylesheet">
-	    <link rel = "stylesheet" href = "../assets/css/fontawesome/css/all.min.css">
+        <link rel = "stylesheet" href = "../assets/css/fontawesome/css/all.min.css">
+        <script src="https://kit.fontawesome.com/a8180108be.js" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="../assets/css/dashboard.css">
 
