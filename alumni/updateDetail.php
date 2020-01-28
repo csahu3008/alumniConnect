@@ -1,3 +1,16 @@
+<?php
+session_start();
+if(!(isset($_SESSION['user']))){
+    echo "<script>window.location='../login.php'</script>";
+}else{
+    $user=$_SESSION['user'];
+    if(!($user[0]=='a')){
+        echo "<script>alert('Only Alumni can enter..')</script>";
+        echo "<script>window.location='../login.php'</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +21,7 @@
 </head>
 <body>
     <?php
-    session_start();
+    // session_start();
     // $_SESSION['user']='a-007';
     $con=mysqli_connect('localhost','root','','alumniconnect');
     $query = "select * from  alumni_detail where deleted=0 and username='$_SESSION[user]'";

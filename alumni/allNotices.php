@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(!(isset($_SESSION['user']))){
+    echo "<script>window.location='../login.php'</script>";
+}else{
+    $user=$_SESSION['user'];
+    if(!($user[0]=='a')){
+        echo "<script>alert('Only Alumni can enter..')</script>";
+        echo "<script>window.location='../login.php'</script>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +21,6 @@
 <body>
     <h1>Published Notices</h1>
     <?php
-    session_start();
     $con=mysqli_connect('localhost','root','','alumniconnect');
     $q1="select college from alumni_detail where username='$_SESSION[user]'";  
     $res1=mysqli_query($con,$q1);

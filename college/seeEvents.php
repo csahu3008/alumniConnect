@@ -45,15 +45,8 @@
         <a href="../index.php"><h4 class="home">Home</h4> </a>
         
     </div>
-    <div class="menu">
-        <h3> MAIN NAVIGATION </h3>
-        <ul>
-            <li><a href="./showAlumni.php">ShowAlumni</a></li>
-            <li><a href="./events.php">AddEvents</a></li>
-            <li><a href="./seeNotice.php">ShowNotices</a></li>
-            <li><a href="./approveAlumni.php">ApproveRequest</a></li>
-        </ul>
-    </div>
+    <?php include("./side_menu.php"); ?>
+
 
 
 <div style="width:50rem;height:40rem;margin-left:250px;margin-top:120px;">
