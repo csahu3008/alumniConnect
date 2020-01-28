@@ -31,32 +31,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        * {
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        #goBack 
+        {
+            padding: 20px 30px;
+            display: inline-block;
+            background: cadetblue;
+            border-radius: 0 0 50% 0/0 0 199%;
+            box-shadow: inset -6px -6px 14px -6px black;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+        }
+        body
+        {
+            background: #4e8185;
+        }
+        form {
+            width: 100%;
+            margin: 60px auto;
+            max-width: 500px;
+            background: #ffffff66;
+            padding: 20px;  
+            border-radius: 20px;
+            box-shadow: 0 0 15px -2px;
+        }
+        form h1 {
+            text-align: center;
+            border-radius: 20px;
+            padding: 10px;
+            background: #ffffff44;
+            margin: 20px;
+        }
+        label > span  {
+            position: relative;
+            top: 40px;
+            left: 15px;
+            color: gray;
+            cursor: text;
+            transition: 500ms;
+        } form input, #submit 
+        {
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border: none;
+        } form #submit 
+        {
+            width: 100px;
+            margin: 10px 0 10px auto;
+            background: #b87f00;
+            color: white;
+        } #eventDateSpan, #eventTimeSpan
+        {
+            top: 0;
+        }
+    </style>
 </head>
-<body>
-    <a href='seeEvents.php'> See Previous Events</a>
+<body  onload="initialCall()">
+    <a id="goBack" href='seeEvents.php'> See Previous Events</a>
     <form method='post' >
     <h1>Add Event </h1>
-    <div>
-        <label>Title</label>
-        <input type='text' placeholder="title" name='title'>
-    </div>
-    <div>
-        <label>Description</label>
-        <input type='text' name='description' placeholder="description">
-    </div>
-    <div>
-        <label>Event Date</label>
-        <input type='date' name='event_date' >
-    </div>
-    <div>
-            <label>Event Time</label>
-            <input type='time' name='event_time'>
-    </div>
-    <div>
-        <label>Venue</label>
-        <input type='text' name='venue'>
-    </div>
-    <input type="submit" value='add Event' />
+    <label for="title"><span id="titleSpan">Title</span>
+        <input required type="text" name="title" id="title" onfocus="moveUp('title')" onblur="moveDown('title')">
+    </label>
+    <label for="description"><span id="descriptionSpan">Description</span>
+        <input required type="text" name="description" id="description" onfocus="moveUp('description')" onblur="moveDown('description')">
+    </label>
+    <label for="eventDate"><span id="eventDateSpan">Event Date</span>
+        <input required type="date" name="event_date" id="eventDate">
+    </label>
+    <label for="eventTime"><span id="eventTimeSpan">Event Time</span>
+        <input required type="time" name="event_time" id="eventTime">
+    </label>
+    <label for="venue"><span id="venueSpan">Venue</span>
+        <input required type="text" name="venue" id="venue" onfocus="moveUp('venue')" onblur="moveDown('venue')">
+    </label>
+    <input type="submit" id="submit" value='add Event' />
     </form>
+    <script>
+    function initialCall() {
+        var user = document.querySelector('#userId');   
+            console.log(user.value);
+            if(!user.value) {
+            moveUp('userId');
+            moveUp('password');
+            }
+
+        }
+        function moveUp(ths) {
+            let eleSpan = document.querySelector('#' + ths + 'Span');
+            eleSpan.style.top = '0';
+            eleSpan.style.color = 'white';
+        }
+        function moveDown(ths) {
+            let ele = document.querySelector('#' + ths);
+            let eleSpan = document.querySelector('#' + ths + 'Span');
+            if(ele.value == "") {
+                eleSpan.style.top = '40px';
+                eleSpan.style.color = 'gray';
+            }
+        }
+        function register(ths1, ths2, ths3, form) {
+            var a = document.querySelector(form);
+            a.scrollIntoView();
+            let icon1 = document.querySelector(ths1);
+            let icon2 = document.querySelector(ths2);
+            let icon3 = document.querySelector(ths3);
+
+            icon1.style.transform = 'scale(1)';
+
+            icon2.style.transform = 'scale(0.5)';
+            icon3.style.transform = 'scale(0.5)';
+        }
+    </script>
 </body>
 </html>
