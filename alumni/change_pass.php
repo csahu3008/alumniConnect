@@ -1,4 +1,14 @@
 <?php
+	session_start();
+	if(!(isset($_SESSION['user']))){
+		echo "<script>window.location='../login.php'</script>";
+	}else{
+		$user=$_SESSION['user'];
+		if(!($user[0]=='a')){
+			echo "<script>alert('Only Alumni can enter..')</script>";
+			echo "<script>window.location='../login.php'</script>";
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -6,29 +16,26 @@
 	<title></title>
 	<script type="text/javascript">
 		function validation()
-		 {
-			var str = document.f1.userpass.value;
-			if(document.f1.userpass.value=="")
+		{
+			var password = document.getElementById("userpass");
+			if(password.value="")
 			{
-			     alert("Please Enter valid Password");
-			     document.f1.userpass.focus();	
+				alert("Enter valid pasword");
 			}
-			
-
-		 	else
-		 	{
-		 		document.f1.submit();
-
-		 	}
-		 }
+		}
 	</script>
 </head>
 <body>
-	<form action="process_pass.php" name="f1" >
+	<form action="process_pass.php" method="post">
 <h2>Change Password</h2>
-		Email:<input type="text" name="email" id='email'><br>
-	    Password: <input type="text" name='userpass'><br>
-	    <input type="button" value='Update Password' onClick="validation();">
+
+		
+		Username<input type="text" name="email" value="<?php echo $user;?>" readonly><br>
+	    New Password: <input type="text" name="userpass"><br>
+	    Confirm Password: <input type="text"><br>
+		
+		<button onclick="validation()"type="submit">Update Password</button>
 	</form>
+
 </body>
 </html>

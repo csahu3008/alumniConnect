@@ -192,6 +192,8 @@
                     }else if($user[0]=='a'){
                         // session_start();
                         $_SESSION['user']=$user;
+                        // echo "<script>alert('$user')</script>";
+                        echo "<script>window.location='./alumni/home.php'</script>";
                      }else{
                         // session_start();
                         $_SESSION['user']=$user;    
