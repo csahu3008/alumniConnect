@@ -86,15 +86,8 @@
         <a href="../index.php"><h4 class="home">Home</h4> </a>
         
     </div>
-    <div class="menu">
-        <h3> MAIN NAVIGATION </h3>
-        <ul>
-            <li><a href="./showAlumni.php">ShowAlumni</a></li>
-            <li><a href="./seeEvents.php">ShowEvents</a></li>
-            <li><a href="./seeNotice.php">ShowNotices</a></li>
-            <li><a href="./approveAlumni.php">ApproveRequest</a></li>
-        </ul>
-    </div>
+    <?php include("./side_menu.php"); ?>
+
 
 
 
@@ -151,7 +144,7 @@
 <span>
        <form action='filterBranchWise.php' method='post'>
            <?php   
-                    session_start();
+                    // session_start();
                     $_SESSION['user']='principal@gecr.in'; 
 
 

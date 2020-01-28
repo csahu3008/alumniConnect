@@ -48,6 +48,7 @@
             <li><a href="./alumniEvent.php">Event_submit</a></li>
             <li><a href="./allEvents.php">All_Events</a></li>
             <li><a href="../chat/chat_to_alumni/home.php">Chat</a></li>
+            <li><a href="./donations.php">MakeDonations</a></li>
             <li><a href="../logout.php">Logout</a></li>
         </ul>
     </div>

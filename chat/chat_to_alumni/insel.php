@@ -39,13 +39,13 @@
 
     else if(isset($_REQUEST['k']))
     {
-        $user = $_SESSION['user'];
+        $user = $_REQUEST['user'];
 
         $con = mysqli_connect('localhost' , 'root' , '' , 'alumniconnect');
         
 
         $arr = array();
-        $q = "SELECT * from alumni_detail where college='GEC Raipur' and username!='$user'";
+        $q = "SELECT * from alumni_detail where college='Government Engineering College Raipur' and username!='$user'";
         $rs = mysqli_query($con , $q);
         while($row = mysqli_fetch_array($rs))
         {

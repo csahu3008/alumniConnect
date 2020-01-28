@@ -9,7 +9,6 @@
 <body>
     <?php
     session_start();
-    $_SESSION['user']='student1';
     $con=mysqli_connect('localhost','root','','alumniconnect');
     $q1="select college from  student where username='$_SESSION[user]'";
     $res1=mysqli_query($con,$q1);

@@ -2,21 +2,26 @@
  if(isset($_REQUEST['title']))
  {
     session_start();
-    $_SESSION['college_id']='5';
+    $con=mysqli_connect('localhost','root','','alumniconnect');
+    // $_SESSION['college_id']='5';
+    $query="select id from college where email='$_SESSION[user]'";
+    $res1=mysqli_query($con,$query);
+    if($row=mysqli_fetch_array($res1) )
+    {
     $title=$_REQUEST['title'];
     $description=$_REQUEST['description'];
     $published_date = date('Y-m-d H:i:s');
-    echo"$_SESSION[college_id],$title,$description,$published_date";
-    $con=mysqli_connect('localhost','root','','alumniconnect');
-    $q="insert into notice values (null,'$title','$description','$published_date','$_SESSION[college_id]',0)";
+     $q="insert into notice values (null,'$title','$description','$published_date','$row[id]',0)";
     $res=mysqli_query($con,$q);
     if($res)
     {
-        echo"Notice Has Been  Successfully created";
+        echo"<script>alert('Notice Has Been  Successfully created')</script>";
     }
     else{
-        echo"database error";
+        echo"<script>alert('Database Error')</script>";
+   
     }
+}
  }
 ?>
 

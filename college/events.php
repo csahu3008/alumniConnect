@@ -1,38 +1,30 @@
 <?php
     include("../header.php");
-?>
-    <div class="menu">
-        <h3> MAIN NAVIGATION </h3>
-        <ul>
-        <li><a href="./home.php" style="font-weight:bold;">Dashboard</a></li>
-            <li><a href="./showAlumni.php">ShowAlumni</a></li>
-            <li><a href="./seeEvents.php">ShowEvents</a></li>
-            <li><a href="./seeNotice.php">ShowNotices</a></li>
-            <li><a href="./approveAlumni.php">ApproveRequest</a></li>
-        </ul>
-    </div>
+    include("./side_menu.php"); ?>
+
 <?php
  if(isset($_REQUEST['title']))
  {
     session_start();
-    $_SESSION['college_id']=2;
-
-    $title=$_REQUEST['title'];
-    $description=$_REQUEST['description'];
-    $event_date=$_REQUEST['event_date'];
-    $event_time=$_REQUEST['event_time'];
-    $venue=$_REQUEST['venue'];
-    $published_date = date('Y-m-d H:i:s');
-    echo"$_SESSION[college_id],$title,$description,$event_date,$event_time,$venue,$published_date";
     $con=mysqli_connect('localhost','root','','alumniconnect');
-    $q="insert into event values (null,'$title','$description','$published_date','$event_date','$event_time','$venue',1,'$_SESSION[college_id]',0,0)";
-    $res=mysqli_query($con,$q);
-    if($res)
-    {
-        echo"Event Has been Successfully created";
-    }
-    else{
-        echo"database error";
+    $query="select id from college where email='$_SESSION[user]'";
+    $res1=mysqli_query($con,$query);
+    if($row=mysqli_fetch_array($res1) ){
+        $title=$_REQUEST['title'];
+        $description=$_REQUEST['description'];
+        $event_date=$_REQUEST['event_date'];
+        $event_time=$_REQUEST['event_time'];
+        $venue=$_REQUEST['venue'];
+        $published_date = date('Y-m-d H:i:s');
+        $q="insert into event values (null,'$title','$description','$published_date','$event_date','$event_time','$venue',1,$row[id],0,0)";
+        $res=mysqli_query($con,$q);
+        if($res)
+        {
+            echo"<script>alert('Event Has been Successfully created')</script>";
+        }
+        else{
+            echo"<script>alert('database error')</script>";
+        }
     }
  }
 ?>

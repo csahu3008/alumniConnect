@@ -1,9 +1,14 @@
-<?php 
-
-if(!(isset($_REQUEST['user']))){
+<?php
+session_start();
+if(!(isset($_SESSION['user']))){
     echo "<script>window.location='../login.php'</script>";
+}else{
+    $user=$_SESSION['user'];
+    if(!($user[0]=='a')){
+        echo "<script>alert('Only Alumni can enter..')</script>";
+        echo "<script>window.location='../login.php'</script>";
+    }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +28,7 @@ if(!(isset($_REQUEST['user']))){
             </label>
             <label for="">
                 <span>User</span>
-                <input type="text" name="user" value="<?php echo $_SESSION['user']; ?>" required>
+                <input type="text" name="user" value="<?php echo  $user; ?>" required readonly>
             </label>
             <button type="submit">Pay</button>
         </form>
