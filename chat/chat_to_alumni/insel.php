@@ -6,7 +6,8 @@
     if(isset($_REQUEST['key']))
     {   
         $msg = $_REQUEST['key'];
-        $sendby = 'saty';
+        $sendby = $_REQUEST['sender'];
+        // echo $sendby;
         $sendto = $_REQUEST['key2'];
         // $sendto='12';
 
@@ -15,7 +16,14 @@
         $time = date('g:i a',$timestamp); 
 
         $con = mysqli_connect('localhost' , 'root' , '' , 'alumniconnect');
+        $q2 = "SELECT name FROM alumni_detail where username='$sendby'";
+        $res = mysqli_query($con,$q2);
+        if($row=mysqli_fetch_array($res)){
+            $sendby=$row['name'];
+            echo $sendby;
+        }
         $q = "INSERT into chats values(NULL ,'$msg' , '$sendby' , '$sendto' , '$time')";
+        
         $rs = mysqli_query($con , $q);
 
         if($rs)
@@ -31,13 +39,13 @@
 
     else if(isset($_REQUEST['k']))
     {
-        // $online = $_SESSION['user'];
+        $user = $_SESSION['user'];
 
         $con = mysqli_connect('localhost' , 'root' , '' , 'alumniconnect');
         
 
         $arr = array();
-        $q = "SELECT * from alumni_detail where college='GEC Raipur'";
+        $q = "SELECT * from alumni_detail where college='GEC Raipur' and username!='$user'";
         $rs = mysqli_query($con , $q);
         while($row = mysqli_fetch_array($rs))
         {
@@ -54,6 +62,11 @@
         
         
         $con = mysqli_connect('localhost' , 'root' , '' , 'alumniconnect');
+        $q2 = "SELECT name FROM alumni_detail where username='$person'";
+        $res = mysqli_query($con,$q2);
+        if($row=mysqli_fetch_array($res)){
+            $person=$row['name'];
+        }
 
         if($sendto == "Group"){
             $q = "SELECT * from chats where SendTo='$sendto'";
