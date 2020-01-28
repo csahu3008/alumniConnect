@@ -41,6 +41,7 @@
             <li><a href="./seeEvents.php">ShowEvents</a></li>
             <li><a href="./seeNotice.php">ShowNotices</a></li>
             <li><a href="./approveAlumni.php">ApproveRequest</a></li>
+            <li><a href="../logout.php">Logout</a></li>
         </ul>
     </div>
 
