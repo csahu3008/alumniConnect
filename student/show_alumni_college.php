@@ -11,7 +11,6 @@
     <div class="alumini-details">
 <?php
 session_start();
-$_SESSION['user']='student2';
 $con=mysqli_connect('localhost','root','','alumniconnect');
 $query = "select college from student where deleted=0 and username='$_SESSION[user]' ";
 $rs_student = mysqli_query($con,$query);
