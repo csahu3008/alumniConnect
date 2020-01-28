@@ -22,6 +22,7 @@ body {
     /* background-image:linear-gradient(to right,yellow,white) */
     border-top-left-radius: 50% 20%;
     border-top-right-radius: 50% 20%;
+    margin-top: 100px;
 }
 .section1, .section4{
     height: 400px;
@@ -44,16 +45,17 @@ body {
     font-family: 'Varela Round', sans-serif;
     text-align: center;
 }
-.section4{
+.section4, .section1{
     margin: 0;
     border-radius: 20px;
     margin: 20px;
     box-shadow: 0 0 10px -4px;
+} .section4 {
     background-image: url("https://www.simc.edu/img/gallery/large/pic_7.jpg");
 }
 .section5 h3{
-    font-size:100px;
-    margin-top: 70px;
+    font-size: 70px;
+    margin-top: 30px;
     font-family: 'Varela Round', sans-serif;
     text-align:center;
 }
@@ -67,25 +69,31 @@ body {
     box-shadow: 10px 10px 10px;
 }
 .section7{
-    height: 25%;
     margin-top: 40px;
-    background: darkcyan;
     padding: 30px;
-    
+    margin: 20px 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 14px -4px;
 }
 
 .groupchat-section{
-    height: 500px;
+    height: 300px;
     Width:100%;
+    overflow: hidden;
 }
 .groupchat-section1{
-    height: 200px;
+    height: 300px;
+    Width: 100%;
+    overflow: hidden;
 }
 .groupchat-image{
     background-position: center;
-    width: 300px;
-    margin: 0% 25%;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    margin: -11% -7%;
     background-size: cover;
+    background-repeat: no-repeat;
     transform: rotate(-35deg);
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdyiCwcbf2CgU-5Gk6m4vCnCalqjafqQ7wxUTGdZ1FG40Y3IQE');
 }
@@ -103,6 +111,7 @@ body {
 } .groupchat-section1 > div{
     margin-top: 50%;
     transform: translate(0px, -50%);
+    margin-top: 150px;
 }
 .img2{
     width:100%;
