@@ -25,7 +25,7 @@
 	<i class="fas fa-plus icon"></i> <br>	
 	<?php
      
-	 	include("../connect.php");
+	 	$con = mysqli_connect('localhost','root','','alumniconnect');
 		$query = "select * from college where deleted=0";
 		$cat = mysqli_query($con,$query);
 		$num = mysqli_num_rows($cat);
@@ -44,7 +44,6 @@
 	<i class="fas fa-plus icon"></i> <br>	
 	<?php
      
-	 	include("../connect.php");
 		$query = "select * from alumni_detail where deleted=0";
 		$cat = mysqli_query($con,$query);
 		$num = mysqli_num_rows($cat);
