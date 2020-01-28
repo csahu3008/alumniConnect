@@ -151,7 +151,7 @@
 <span>
        <form action='filterBranchWise.php' method='post'>
            <?php   
-                    session_start();
+                  
                     $_SESSION['user']='principal@gecr.in'; 
 
 

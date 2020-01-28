@@ -1,8 +1,20 @@
 <?php
+    include("../header.php");
+?>
+    <div class="menu">
+        <h3> MAIN NAVIGATION </h3>
+        <ul>
+            <li><a href="./showAlumni.php">ShowAlumni</a></li>
+            <li><a href="./seeEvents.php">ShowEvents</a></li>
+            <li><a href="./seeNotice.php">ShowNotices</a></li>
+            <li><a href="./approveAlumni.php">ApproveRequest</a></li>
+        </ul>
+    </div>
+<?php
  if(isset($_REQUEST['title']))
  {
     session_start();
-    $_SESSION['college_id']='5';
+    $_SESSION['college_id']=2;
 
     $title=$_REQUEST['title'];
     $description=$_REQUEST['description'];
@@ -24,13 +36,8 @@
  }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <title>Events</title>
     <style>
         * {
             margin:0px;
@@ -41,24 +48,21 @@
         {
             padding: 20px 30px;
             display: inline-block;
-            background: cadetblue;
+            background: #7C5295;
             border-radius: 0 0 50% 0/0 0 199%;
             box-shadow: inset -6px -6px 14px -6px black;
             text-decoration: none;
             color: white;
             font-weight: bold;
             position: fixed;
-            top: 0;
+            top: 35;
         }
-        body
-        {
-            background: #4e8185;
-        }
+        
         form {
             width: 100%;
             margin: 60px auto;
             max-width: 500px;
-            background: #ffffff66;
+            background: #B491C8;
             padding: 20px;  
             border-radius: 20px;
             box-shadow: 0 0 15px -2px;
@@ -97,7 +101,8 @@
     </style>
 </head>
 <body  onload="initialCall()">
-    <a id="goBack" href='seeEvents.php'> See Previous Events</a>
+    <div class="main">
+    <a id="goBack" class="heading" href='seeEvents.php'> See Previous Events</a>
     <form method='post' >
     <h1>Add Event </h1>
     <label for="title"><span id="titleSpan">Title</span>
@@ -115,7 +120,7 @@
     <label for="venue"><span id="venueSpan">Venue</span>
         <input required type="text" name="venue" id="venue" onfocus="moveUp('venue')" onblur="moveDown('venue')">
     </label>
-    <input type="submit" id="submit" value='add Event' />
+    <input type="submit" id="submit" value='Add Event' />
 
     </form>
     <script>
@@ -154,5 +159,6 @@
             icon3.style.transform = 'scale(0.5)';
         }
     </script>
+</div>
 </body>
 </html>

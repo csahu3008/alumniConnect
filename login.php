@@ -194,9 +194,13 @@
                         $_SESSION['user']=$user;
                         // echo "<script>alert('$user')</script>";
                         echo "<script>window.location='./alumni/home.php'</script>";
+                     }elseif($user=="dhe@goa"){
+                        $_SESSION['user']=$user; 
+                        echo "<script>window.location='./dte/dashboard.php'</script>"; 
                      }else{
                         // session_start();
                         $_SESSION['user']=$user;    
+                        echo "<script>window.location='./college/home.php'</script>"; 
                        // echo "Something went wrong. ☹ "; 
                     }
                 }else{
