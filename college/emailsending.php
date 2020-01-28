@@ -13,8 +13,6 @@ echo"</form>";
 
 if(isset($_REQUEST['message']))
 {   session_start();
-    $_SESSION['user']='gec@gec.com';
-
     require '../sendgrid-php/sendgrid-php.php';
     $email = new \SendGrid\Mail\Mail();
     $email->setFrom("$_SESSION[user]", "College");

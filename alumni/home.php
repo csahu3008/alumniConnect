@@ -50,58 +50,10 @@
             <li><a href="../logout.php">Logout</a></li>
         </ul>
     </div>
-
-
-
-    <!-- <a href="dashboard.php">
-<div class="module" style="margin-left: 350px"> 
-	<div class="module_title">
-		My Account
-	</div>
-	<i class="fas fa-plus icon"></i>	
-</div>
-</a>
-
-<a href="show_college.php">
-<div class="module"> 
-	<div class="module_title">
-		College
-	</div>
-	
-	<i class="fas fa-plus icon"></i> <br>	
-	<?php
-     
-	 	// include("../connect.php");
-		// $query = "select * from college where deleted=0";
-		// $cat = mysqli_query($con,$query);
-		// $num = mysqli_num_rows($cat);
-		// echo '<div class="num">'.$num.'</div>';
-	 
-	 ?>
-</div>
-</a>
-
-<a href="">
-<div class="module"> 
-	<div class="module_title">
-		Alumni
-	</div>
-	
-	<i class="fas fa-plus icon"></i> <br>	
-	<?php
-     
-		// $query = "select * from alumni_detail where deleted=0";
-		// $cat = mysqli_query($con,$query);
-		// $num = mysqli_num_rows($cat);
-		// echo '<div class="num">'.$num.'</div>';
-	 
-	 ?>
-</div>
-</a> -->
 <div style="width:50rem;height:10rem;margin-left:250px;margin-top:120px;">
-    <p style="padding:10px;font-size:70px;">Hello <?php echo "$_SESSION[user]";?></p>
+    <p style="padding:10px;font-size:70px;">Hello <?php echo $_SESSION['user'];?></p>
     <hr>
-    <h2 style="margin-left:17px;font-size:30px;margin-top:10px;">Welcome To <span style="color:green;">ALUM</span></h3>
+    <h2 style="margin-left:17px;font-size:30px;margin-top:10px;">Welcome To <span style="color:green;">ALUMS</span></h3>
 </div>
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3_izZkBD9SZpYDfL69HjehgqYLfpWw0E7ND5ADltb5WBzLnvd" alt="" style="margin-left:350px;margin-top:50px;">
 </body>

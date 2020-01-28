@@ -1,12 +1,10 @@
 <?php 
-echo"Hello World";
 if(isset($_REQUEST['email']))
 {
 	$username = $_REQUEST['email'];
 	$password = $_REQUEST['userpass'];
 	$con = mysqli_connect("localhost","root","") or die("connection error");
     
-echo"$username  $password";
 
 	mysqli_select_db($con,"alumniconnect") or die("seletion error");
 

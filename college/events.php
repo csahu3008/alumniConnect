@@ -14,7 +14,7 @@
  if(isset($_REQUEST['title']))
  {
     session_start();
-    $_SESSION['college_id']='5';
+    $_SESSION['college_id']=2;
 
     $title=$_REQUEST['title'];
     $description=$_REQUEST['description'];

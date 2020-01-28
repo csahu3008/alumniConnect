@@ -129,19 +129,66 @@
 		.main{
 			margin-left: 220px;
 			margin-top: 20px;
-<<<<<<< HEAD
-
-=======
 		}
 		.hid-but{
-			margin-top:50px;
-			width:165px;
-			padding: 20px;
-			font-size:20px;
-			color: white;
+			width: 10rem;
+			height:40px;
+			padding: 10px;
+			font-size: 18px;
+			margin-top: 30px;
 			border: none;
-			border-radius: 10px;	
-			cursor: pointer;
+			border-radius: 10px;
 			background: purple;
->>>>>>> 939d9a9450ea2435f45c336709024d2d3fee1f66
+			font-weight: bold;
+			color: white;
+		}
+		.form-updatealum{
+			width:60%;
+			margin-left: 250px;
+			height:100vh;
+			margin-top: -50px;
+			border: 1px solid black;
+			overflow-y:scroll;
+			border-radius: 3px;
+			box-shadow: 2px 2px 2px;
+			/* div:webkitscrollbar  */
+		}
+		.udt-form{
+			padding: 35px;
+		}
+		.udt-form label{
+			display:block;
+			margin-top: 30px;
+			font-size: 25px;
+		}
+		.udt-form input{
+			width:70%;
+			margin-left: 50px;
+			margin-top: 10px;
+			padding: 13px;
+			border-radius: 7px;
+			border:none;
+			outline: none;
+			border:1px solid purple;
+		}
+		.udt-form input[type="submit"]{
+			width:150px;
+			cursor: pointer;
+			margin-top: 30px;
+			font-size: 18px;
+			color: white;
+			background: #710193;
+		}
+		.changepass_form{
+			width:70%;
+			height:500px;
+			margin-left:17rem;
+			margin-top: -30px;
+		}
+		.changepass_form label{
+			font-size:20px;
+			margin-top:30px;
+		}
+		.changepass_form input{
+			
 		}

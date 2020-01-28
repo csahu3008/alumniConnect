@@ -10,10 +10,53 @@
 		}
 	}
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Righteous|Varela+Round&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href = "../assets/css/fontawesome/css/all.min.css">
+        <script src="https://kit.fontawesome.com/a8180108be.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="../assets/css/dashboard.css">
+
+
+</head>
+
+<body style= "font-family: 'Varela Round', sans-serif;">
+	<div class="header"> 
+    
+    	<h1 class="title"> ALUMS  </h1>
+        
+        <a href="#" onClick="return confirm('Are You Sure??')" title="Logout">
+       
+		<i class="fas fa-sign-out-alt" style="font-size: 18px"></i>
+        </a>
+         
+        <a href="../index.php"><h4 class="home">Home</h4> </a>
+        
+    </div>
+    <div class="menu">
+        <h3> MAIN NAVIGATION </h3>
+        <ul>
+            <li><a href="./change_pass.php">Change_password</a></li>
+            <li><a href="./updateDetail.php">Update_Details</a></li>
+            <li><a href="./alumniEvent.php">Event_submit</a></li>
+            <li><a href="./allEvents.php">All_Events</a></li>
+            <li><a href="../chat/chat_to_alumni/home.php">Chat</a></li>
+            <li><a href="../logout.php">Logout</a></li>
+        </ul>
+    </div>
+    <div style="width:50rem;height:10rem;margin-left:250px;margin-top:120px;">
+    <h2 style="margin-left:17px;font-size:30px;margin-top:10px;"><span style="color:green;">Change Password</span></h3>
+    <hr>
+    <!-- <h2 style="margin-left:17px;font-size:30px;margin-top:10px;">Welcome To <span style="color:green;">ALUMS</span></h3> -->
+</div>
+
 	<script type="text/javascript">
 		function validation()
 		{
@@ -24,16 +67,16 @@
 			}
 		}
 	</script>
-</head>
+
 <body>
-	<form action="process_pass.php" method="post">
-<h2>Change Password</h2>
+	
+	<form action="process_pass.php" method="post" class="changepass_form">
+
 
 		
-		Username<input type="text" name="email" value="<?php echo $user;?>" readonly><br>
-	    New Password: <input type="text" name="userpass"><br>
-	    Confirm Password: <input type="text"><br>
-		
+		<label>Username :</label><input type="text" name="email" value="<?php echo $user;?>" readonly><br>
+	    <label>New Password: </label><input type="text" name="userpass"><br>
+	    <label>Confirm Password: </label><input type="text"><br>
 		<button onclick="validation()"type="submit">Update Password</button>
 	</form>
 
